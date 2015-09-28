@@ -1,0 +1,941 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+/	plugin/SearchComplete.vim	/^noremap \/ :call SearchCompleteStart()<CR>\/$/;"	m
+<C-G>S	plugin/surround.vim	/^  imap      <C-G>S <Plug>ISurround$/;"	m
+<C-G>s	plugin/surround.vim	/^  imap      <C-G>s <Plug>Isurround$/;"	m
+<C-J>	plugin/imaps.vim	/^		vmap <C-J> <Plug>IMAP_DeleteAndJumpForward$/;"	m
+<C-J>	plugin/imaps.vim	/^		vmap <C-J> <Plug>IMAP_JumpForward$/;"	m
+<C-J>	plugin/imaps.vim	/^    imap <C-J> <Plug>IMAP_JumpForward$/;"	m
+<C-J>	plugin/imaps.vim	/^    nmap <C-J> <Plug>IMAP_JumpForward$/;"	m
+<C-S>	plugin/surround.vim	/^    imap    <C-S> <Plug>Isurround$/;"	m
+<Leader>gA	plugin/git.vim	/^    nnoremap <Leader>gA :GitAdd <cfile><Enter>$/;"	m
+<Leader>gD	plugin/git.vim	/^    nnoremap <Leader>gD :GitDiff --cached<Enter>$/;"	m
+<Leader>ga	plugin/git.vim	/^    nnoremap <Leader>ga :GitAdd<Enter>$/;"	m
+<Leader>gc	plugin/git.vim	/^    nnoremap <Leader>gc :GitCommit<Enter>$/;"	m
+<Leader>gd	plugin/git.vim	/^    nnoremap <Leader>gd :GitDiff<Enter>$/;"	m
+<Leader>gl	plugin/git.vim	/^    nnoremap <Leader>gl :GitLog<Enter>$/;"	m
+<Leader>gp	plugin/git.vim	/^    nnoremap <Leader>gp :GitPullRebase<Enter>$/;"	m
+<Leader>gs	plugin/git.vim	/^    nnoremap <Leader>gs :GitStatus<Enter>$/;"	m
+<Plug>Csurround	plugin/surround.vim	/^nnoremap <silent> <Plug>Csurround  :<C-U>call <SID>changesurround()<CR>$/;"	m
+<Plug>Dsurround	plugin/surround.vim	/^nnoremap <silent> <Plug>Dsurround  :<C-U>call <SID>dosurround(<SID>inputtarget())<CR>$/;"	m
+<Plug>IMAP_DeleteAndJumpBack	plugin/imaps.vim	/^vmap <silent> <Plug>IMAP_DeleteAndJumpBack          "_<Del>i<c-r>=IMAP_Jumpfunc('b', 0)<CR>$/;"	m
+<Plug>IMAP_DeleteAndJumpForward	plugin/imaps.vim	/^vmap <silent> <Plug>IMAP_DeleteAndJumpForward       "_<Del>i<c-r>=IMAP_Jumpfunc('', 0)<CR>$/;"	m
+<Plug>IMAP_JumpBack	plugin/imaps.vim	/^imap <silent> <Plug>IMAP_JumpBack       <c-r>=IMAP_Jumpfunc('b', 0)<CR>$/;"	m
+<Plug>IMAP_JumpBack	plugin/imaps.vim	/^nmap <silent> <Plug>IMAP_JumpBack           i<c-r>=IMAP_Jumpfunc('b', 0)<CR>$/;"	m
+<Plug>IMAP_JumpBack	plugin/imaps.vim	/^vmap <silent> <Plug>IMAP_JumpBack          <C-\\><C-N>`<i<c-r>=IMAP_Jumpfunc('b', 0)<CR>$/;"	m
+<Plug>IMAP_JumpForward	plugin/imaps.vim	/^imap <silent> <Plug>IMAP_JumpForward    <c-r>=IMAP_Jumpfunc('', 0)<CR>$/;"	m
+<Plug>IMAP_JumpForward	plugin/imaps.vim	/^nmap <silent> <Plug>IMAP_JumpForward        i<c-r>=IMAP_Jumpfunc('', 0)<CR>$/;"	m
+<Plug>IMAP_JumpForward	plugin/imaps.vim	/^vmap <silent> <Plug>IMAP_JumpForward       <C-\\><C-N>i<c-r>=IMAP_Jumpfunc('', 0)<CR>$/;"	m
+<Plug>ISurround	plugin/surround.vim	/^inoremap <silent> <Plug>ISurround  <C-R>=<SID>insert(1)<CR>$/;"	m
+<Plug>Isurround	plugin/surround.vim	/^inoremap <silent> <Plug>Isurround  <C-R>=<SID>insert()<CR>$/;"	m
+<Plug>VSurround	plugin/surround.vim	/^vnoremap <silent> <Plug>VSurround  :<C-U>call <SID>opfunc(visualmode(),visualmode() ==# 'V' ? 1 : 0)<CR>$/;"	m
+<Plug>VgSurround	plugin/surround.vim	/^vnoremap <silent> <Plug>VgSurround :<C-U>call <SID>opfunc(visualmode(),visualmode() ==# 'V' ? 0 : 1)<CR>$/;"	m
+<Plug>YSsurround	plugin/surround.vim	/^nnoremap <silent> <Plug>YSsurround :<C-U>call <SID>opfunc2(v:count1)<CR>$/;"	m
+<Plug>YSurround	plugin/surround.vim	/^nnoremap <silent> <Plug>YSurround  :<C-U>set opfunc=<SID>opfunc2<CR>g@$/;"	m
+<Plug>Yssurround	plugin/surround.vim	/^nnoremap <silent> <Plug>Yssurround :<C-U>call <SID>opfunc(v:count1)<CR>$/;"	m
+<Plug>Ysurround	plugin/surround.vim	/^nnoremap <silent> <Plug>Ysurround  :<C-U>set opfunc=<SID>opfunc<CR>g@$/;"	m
+<SID>xx	plugin/taglist.vim	/^    map <SID>xx <SID>xx$/;"	m
+<plug><+SelectRegion+>	plugin/imaps.vim	/^nmap <silent> <script> <plug><+SelectRegion+> `<v`>$/;"	m
+ABOVE_NORMAL_PRIORITY_CLASS	autoload/conque_term/conque_win32_util.py	/^ABOVE_NORMAL_PRIORITY_CLASS = 0x00008000$/;"	v
+AddListItem	plugin/libList.vim	/^function AddListItem( array, newItem, index )$/;"	f
+AddSyntaxFoldItem	plugin/SyntaxFolds.vim	/^function! AddSyntaxFoldItem(start, end, startoff, endoff, ...)$/;"	f
+BELOW_NORMAL_PRIORITY_CLASS	autoload/conque_term/conque_win32_util.py	/^BELOW_NORMAL_PRIORITY_CLASS = 0x00004000$/;"	v
+CAPSLOCK_ON	autoload/conque_term/conque_win32_util.py	/^CAPSLOCK_ON = 0x0080$/;"	v
+CHAR_INFO	autoload/conque_term/conque_win32_util.py	/^class CHAR_INFO(Structure):$/;"	c
+CHAR_UNION	autoload/conque_term/conque_win32_util.py	/^class CHAR_UNION(Union):$/;"	c
+CONQUE_COLOR_SEQUENCE	autoload/conque_term/conque_globals.py	/^CONQUE_COLOR_SEQUENCE = ($/;"	v
+CONQUE_CTL	autoload/conque_term/conque_globals.py	/^CONQUE_CTL = {$/;"	v
+CONQUE_ESCAPE	autoload/conque_term/conque_globals.py	/^CONQUE_ESCAPE = {$/;"	v
+CONQUE_ESCAPE_CHARSET	autoload/conque_term/conque_globals.py	/^CONQUE_ESCAPE_CHARSET = {$/;"	v
+CONQUE_ESCAPE_HASH	autoload/conque_term/conque_globals.py	/^CONQUE_ESCAPE_HASH = {$/;"	v
+CONQUE_ESCAPE_PLAIN	autoload/conque_term/conque_globals.py	/^CONQUE_ESCAPE_PLAIN = {$/;"	v
+CONQUE_ESCAPE_QUESTION	autoload/conque_term/conque_globals.py	/^CONQUE_ESCAPE_QUESTION = {$/;"	v
+CONQUE_FONT	autoload/conque_term/conque_globals.py	/^CONQUE_FONT = {$/;"	v
+CONQUE_GRAPHICS_SET	autoload/conque_term/conque_globals.py	/^CONQUE_GRAPHICS_SET = [$/;"	v
+CONQUE_MAX_SYNTAX_LINES	autoload/conque_term/conque_globals.py	/^CONQUE_MAX_SYNTAX_LINES = 200$/;"	v
+CONQUE_PYTHON_VERSION	autoload/conque_term/conque_globals.py	/^CONQUE_PYTHON_VERSION = sys.version_info[0]$/;"	v
+CONQUE_PYTHON_VERSION	autoload/conque_term/conque_sole_shared_memory.py	/^CONQUE_PYTHON_VERSION = sys.version_info[0]$/;"	v
+CONQUE_SEQ_REGEX	autoload/conque_term/conque_globals.py	/^CONQUE_SEQ_REGEX = re.compile("(\\x1b\\[?\\??#?[0-9;]*[a-zA-Z0-9@=>]|\\x1b\\][0-9];.*?\\x07|[\\x01-\\x0f]|\\x1b\\([AB0])")$/;"	v
+CONQUE_SEQ_REGEX_CHAR	autoload/conque_term/conque_globals.py	/^CONQUE_SEQ_REGEX_CHAR = re.compile("^\\x1b[()]")$/;"	v
+CONQUE_SEQ_REGEX_CSI	autoload/conque_term/conque_globals.py	/^CONQUE_SEQ_REGEX_CSI = re.compile("^\\x1b\\[")$/;"	v
+CONQUE_SEQ_REGEX_CTL	autoload/conque_term/conque_globals.py	/^CONQUE_SEQ_REGEX_CTL = re.compile("^[\\x01-\\x0f]$")$/;"	v
+CONQUE_SEQ_REGEX_ESC	autoload/conque_term/conque_globals.py	/^CONQUE_SEQ_REGEX_ESC = re.compile("^\\x1b.$")$/;"	v
+CONQUE_SEQ_REGEX_HASH	autoload/conque_term/conque_globals.py	/^CONQUE_SEQ_REGEX_HASH = re.compile("^\\x1b#")$/;"	v
+CONQUE_SEQ_REGEX_TITLE	autoload/conque_term/conque_globals.py	/^CONQUE_SEQ_REGEX_TITLE = re.compile("^\\x1b\\]")$/;"	v
+CONQUE_SOLE_BUFFER_LENGTH	autoload/conque_term/conque_globals.py	/^CONQUE_SOLE_BUFFER_LENGTH = 1000$/;"	v
+CONQUE_SOLE_BUFFER_REDRAW	autoload/conque_term/conque_globals.py	/^CONQUE_SOLE_BUFFER_REDRAW = 500$/;"	v
+CONQUE_SOLE_COMMANDS_SIZE	autoload/conque_term/conque_globals.py	/^CONQUE_SOLE_COMMANDS_SIZE = 255$/;"	v
+CONQUE_SOLE_INPUT_SIZE	autoload/conque_term/conque_globals.py	/^CONQUE_SOLE_INPUT_SIZE = 1000$/;"	v
+CONQUE_SOLE_MEM_REDRAW	autoload/conque_term/conque_globals.py	/^CONQUE_SOLE_MEM_REDRAW = 1000$/;"	v
+CONQUE_SOLE_RESCROLL_SIZE	autoload/conque_term/conque_globals.py	/^CONQUE_SOLE_RESCROLL_SIZE = 255$/;"	v
+CONQUE_SOLE_RESIZE_SIZE	autoload/conque_term/conque_globals.py	/^CONQUE_SOLE_RESIZE_SIZE = 255$/;"	v
+CONQUE_SOLE_SCREEN_REDRAW	autoload/conque_term/conque_globals.py	/^CONQUE_SOLE_SCREEN_REDRAW = 50$/;"	v
+CONQUE_SOLE_STATS_SIZE	autoload/conque_term/conque_globals.py	/^CONQUE_SOLE_STATS_SIZE = 1000$/;"	v
+CONQUE_TABLE_OUTPUT	autoload/conque_term/conque_globals.py	/^CONQUE_TABLE_OUTPUT = re.compile("^\\s*\\|\\s.*\\s\\|\\s*$|^\\s*\\+[=+-]+\\+\\s*$")$/;"	v
+CONQUE_VIM_ENCODING	autoload/conque_term/conque_globals.py	/^    CONQUE_VIM_ENCODING = 'utf-8'$/;"	v
+CONQUE_VIM_ENCODING	autoload/conque_term/conque_globals.py	/^    CONQUE_VIM_ENCODING = vim.eval('&encoding')$/;"	v
+CONQUE_VK_ATTR_CTRL_PRESSED	autoload/conque_term/conque_globals.py	/^CONQUE_VK_ATTR_CTRL_PRESSED = u('1024')$/;"	v
+CONQUE_WIN32_REGEX_ATTR	autoload/conque_term/conque_globals.py	/^CONQUE_WIN32_REGEX_ATTR = re.compile("((.)\\\\2*)", re.DOTALL)$/;"	v
+CONQUE_WIN32_REGEX_VK	autoload/conque_term/conque_globals.py	/^CONQUE_WIN32_REGEX_VK = re.compile("(\\x1b\\[[0-9;]+VK)")$/;"	v
+CONQUE_WINDOWS_VK	autoload/conque_term/conque_win32_util.py	/^CONQUE_WINDOWS_VK = {$/;"	v
+CONQUE_WINDOWS_VK_ENHANCED	autoload/conque_term/conque_win32_util.py	/^CONQUE_WINDOWS_VK_ENHANCED = {$/;"	v
+CONQUE_WINDOWS_VK_INV	autoload/conque_term/conque_win32_util.py	/^CONQUE_WINDOWS_VK_INV = dict([v, k] for k, v in CONQUE_WINDOWS_VK.items())$/;"	v
+CONSOLE_SCREEN_BUFFER_INFO	autoload/conque_term/conque_win32_util.py	/^class CONSOLE_SCREEN_BUFFER_INFO(Structure):$/;"	c
+COORD	autoload/conque_term/conque_win32_util.py	/^class COORD(Structure):$/;"	c
+CREATE_BREAKAWAY_FROM_JOB	autoload/conque_term/conque_win32_util.py	/^CREATE_BREAKAWAY_FROM_JOB = 0x01000000$/;"	v
+CREATE_DEFAULT_ERROR_MODE	autoload/conque_term/conque_win32_util.py	/^CREATE_DEFAULT_ERROR_MODE = 0x04000000$/;"	v
+CREATE_NEW_CONSOLE	autoload/conque_term/conque_win32_util.py	/^CREATE_NEW_CONSOLE = 0x00000010$/;"	v
+CREATE_NEW_PROCESS_GROUP	autoload/conque_term/conque_win32_util.py	/^CREATE_NEW_PROCESS_GROUP = 0x00000200$/;"	v
+CREATE_NO_WINDOW	autoload/conque_term/conque_win32_util.py	/^CREATE_NO_WINDOW = 0x08000000$/;"	v
+CREATE_PRESERVE_CODE_AUTHZ_LEVEL	autoload/conque_term/conque_win32_util.py	/^CREATE_PRESERVE_CODE_AUTHZ_LEVEL = 0x02000000$/;"	v
+CREATE_PROTECTED_PROCESS	autoload/conque_term/conque_win32_util.py	/^CREATE_PROTECTED_PROCESS = 0x00040000$/;"	v
+CREATE_SEPARATE_WOW_VDM	autoload/conque_term/conque_win32_util.py	/^CREATE_SEPARATE_WOW_VDM = 0x00000800$/;"	v
+CREATE_SHARED_WOW_VDM	autoload/conque_term/conque_win32_util.py	/^CREATE_SHARED_WOW_VDM = 0x00001000$/;"	v
+CREATE_SUSPENDED	autoload/conque_term/conque_win32_util.py	/^CREATE_SUSPENDED = 0x00000004$/;"	v
+CREATE_UNICODE_ENVIRONMENT	autoload/conque_term/conque_win32_util.py	/^CREATE_UNICODE_ENVIRONMENT = 0x00000400$/;"	v
+Conque	autoload/conque_term/conque.py	/^class Conque:$/;"	c
+ConqueScreen	autoload/conque_term/conque_screen.py	/^class ConqueScreen(object):$/;"	c
+ConqueSole	autoload/conque_term/conque_sole.py	/^class ConqueSole(Conque):$/;"	c
+ConqueSoleSharedMemory	autoload/conque_term/conque_sole_shared_memory.py	/^class ConqueSoleSharedMemory():$/;"	c
+ConqueSoleSubprocess	autoload/conque_term/conque_sole_subprocess.py	/^class ConqueSoleSubprocess():$/;"	c
+ConqueSoleWrapper	autoload/conque_term/conque_sole_wrapper.py	/^class ConqueSoleWrapper():$/;"	c
+ConqueSubprocess	autoload/conque_term/conque_subprocess.py	/^class ConqueSubprocess:$/;"	c
+ConqueTerm	plugin/conque_term.vim	/^command! -nargs=+ -complete=shellcmd ConqueTerm call conque_term#open(<q-args>)$/;"	c
+ConqueTermSplit	plugin/conque_term.vim	/^command! -nargs=+ -complete=shellcmd ConqueTermSplit call conque_term#open(<q-args>, ['belowright split'])$/;"	c
+ConqueTermTab	plugin/conque_term.vim	/^command! -nargs=+ -complete=shellcmd ConqueTermTab call conque_term#open(<q-args>, ['tabnew'])$/;"	c
+ConqueTermVSplit	plugin/conque_term.vim	/^command! -nargs=+ -complete=shellcmd ConqueTermVSplit call conque_term#open(<q-args>, ['belowright vsplit'])$/;"	c
+DETACHED_PROCESS	autoload/conque_term/conque_win32_util.py	/^DETACHED_PROCESS = 0x00000008$/;"	v
+DoHighlightGitBlame	plugin/git.vim	/^function! s:DoHighlightGitBlame()$/;"	f
+ENHANCED_KEY	autoload/conque_term/conque_win32_util.py	/^ENHANCED_KEY = 0x0100$/;"	v
+EXTENDED_STARTUPINFO_PRESENT	autoload/conque_term/conque_win32_util.py	/^EXTENDED_STARTUPINFO_PRESENT = 0x00080000$/;"	v
+ExchangeListItems	plugin/libList.vim	/^function ExchangeListItems( array, item1Index, item2Index )$/;"	f
+ExecMap	plugin/imaps.vim	/^function! ExecMap(prefix, mode)$/;"	f
+Expand	plugin/git.vim	/^function! s:Expand(expr)$/;"	f
+FB_DisplayFiles	plugin/filebrowser.vim	/^function! FB_DisplayFiles(dir)$/;"	f
+FB_DisplayHelp	plugin/filebrowser.vim	/^function! <SID>FB_DisplayHelp()$/;"	f
+FB_EditEntry	plugin/filebrowser.vim	/^function! <SID>FB_EditEntry()$/;"	f
+FB_GetVar	plugin/filebrowser.vim	/^function! <SID>FB_GetVar(name, default)$/;"	f
+FB_OpenFileBrowser	plugin/filebrowser.vim	/^function! FB_OpenFileBrowser(dir)$/;"	f
+FB_ResetSilentSettings	plugin/filebrowser.vim	/^function! <SID>FB_ResetSilentSettings()$/;"	f
+FB_SetHighlighting	plugin/filebrowser.vim	/^function! <SID>FB_SetHighlighting()$/;"	f
+FB_SetMaps	plugin/filebrowser.vim	/^function! <SID>FB_SetMaps()$/;"	f
+FB_SetScratchSettings	plugin/filebrowser.vim	/^function! <SID>FB_SetScratchSettings()$/;"	f
+FB_SetSilentSettings	plugin/filebrowser.vim	/^function! <SID>FB_SetSilentSettings()$/;"	f
+FB_SetVar	plugin/filebrowser.vim	/^function! FB_SetVar(varname, value)$/;"	f
+FB_ToggleHelp	plugin/filebrowser.vim	/^function! <SID>FB_ToggleHelp()$/;"	f
+FILL_CHAR	autoload/conque_term/conque_sole_shared_memory.py	/^    FILL_CHAR = None$/;"	v	class:ConqueSoleSharedMemory
+FOCUS_EVENT	autoload/conque_term/conque_win32_util.py	/^FOCUS_EVENT = 0x0010$/;"	v
+FOCUS_EVENT_RECORD	autoload/conque_term/conque_win32_util.py	/^class FOCUS_EVENT_RECORD(Structure):$/;"	c
+FoldRegionsWithNoSkip	plugin/SyntaxFolds.vim	/^function! FoldRegionsWithNoSkip(startpat, endpat, startoff, endoff, line1, line2, skippedRegions)$/;"	f
+FoldRegionsWithSkip	plugin/SyntaxFolds.vim	/^function! FoldRegionsWithSkip(startpat, endpat, startoff, endoff, startskip, endskip, line1, line2)$/;"	f
+GetGitDir	plugin/git.vim	/^function! s:GetGitDir()$/;"	f
+GetListCount	plugin/libList.vim	/^function GetListCount( array )$/;"	f
+GetListItem	plugin/libList.vim	/^function GetListItem( array, index )$/;"	f
+GetListMatchItem	plugin/libList.vim	/^function GetListMatchItem( array, pattern )$/;"	f
+GetTeXIndent	indent/tex.vim	/^function GetTeXIndent()$/;"	f
+Git	plugin/git.vim	/^command! -nargs=+ Git                 call GitDoCommand(<q-args>)$/;"	c
+GitAdd	plugin/git.vim	/^command! -nargs=? GitAdd              call GitAdd(<q-args>)$/;"	c
+GitAdd	plugin/git.vim	/^function! GitAdd(expr)$/;"	f
+GitBlame	plugin/git.vim	/^command! -nargs=? GitBlame            call GitBlame(<q-args>)$/;"	c
+GitBlame	plugin/git.vim	/^function! GitBlame(...)$/;"	f
+GitBranch	plugin/git.vim	/^function! GitBranch()$/;"	f
+GitCatFile	plugin/git.vim	/^command! -nargs=1 GitCatFile          call GitCatFile(<q-args>)$/;"	c
+GitCatFile	plugin/git.vim	/^function! GitCatFile(file)$/;"	f
+GitCheckout	plugin/git.vim	/^command! -nargs=1 -complete=customlist,ListGitCommits GitCheckout call GitCheckout(<q-args>)$/;"	c
+GitCheckout	plugin/git.vim	/^function! GitCheckout(args)$/;"	f
+GitCommit	plugin/git.vim	/^command! -nargs=* GitCommit           call GitCommit(<q-args>)$/;"	c
+GitCommit	plugin/git.vim	/^function! GitCommit(args)$/;"	f
+GitDiff	plugin/git.vim	/^command! -nargs=* -complete=customlist,ListGitCommits GitDiff     call GitDiff(<q-args>)$/;"	c
+GitDiff	plugin/git.vim	/^function! GitDiff(args)$/;"	f
+GitDoCommand	plugin/git.vim	/^function! GitDoCommand(args)$/;"	f
+GitLog	plugin/git.vim	/^command! -nargs=* GitLog              call GitLog(<q-args>)$/;"	c
+GitLog	plugin/git.vim	/^function! GitLog(args)$/;"	f
+GitPull	plugin/git.vim	/^command! -nargs=* GitPull             call GitPull(<q-args>)$/;"	c
+GitPull	plugin/git.vim	/^function! GitPull(args)$/;"	f
+GitPullRebase	plugin/git.vim	/^command!          GitPullRebase       call GitPull('--rebase')$/;"	c
+GitPush	plugin/git.vim	/^command! -nargs=* GitPush             call GitPush(<q-args>)$/;"	c
+GitPush	plugin/git.vim	/^function! GitPush(args)$/;"	f
+GitStatus	plugin/git.vim	/^command!          GitStatus           call GitStatus()$/;"	c
+GitStatus	plugin/git.vim	/^function! GitStatus()$/;"	f
+GitVimDiffMerge	plugin/git.vim	/^command!          GitVimDiffMerge     call GitVimDiffMerge()$/;"	c
+GitVimDiffMerge	plugin/git.vim	/^function! GitVimDiffMerge()$/;"	f
+GitVimDiffMergeDone	plugin/git.vim	/^command!          GitVimDiffMergeDone call GitVimDiffMergeDone()$/;"	c
+GitVimDiffMergeDone	plugin/git.vim	/^function! GitVimDiffMergeDone()$/;"	f
+HIGH_PRIORITY_CLASS	autoload/conque_term/conque_win32_util.py	/^HIGH_PRIORITY_CLASS = 0x00000080$/;"	v
+Hash	plugin/imaps.vim	/^fun! s:Hash(text)$/;"	f
+HiLink	syntax/cpp.vim	/^    command -nargs=+ HiLink hi def link <args>$/;"	c
+HiLink	syntax/cpp.vim	/^    command -nargs=+ HiLink hi link <args>$/;"	c
+HiLink	syntax/python3.0.vim	/^    command -nargs=+ HiLink hi def link <args>$/;"	c
+HiLink	syntax/python3.0.vim	/^    command -nargs=+ HiLink hi link <args>$/;"	c
+IDLE_PRIORITY_CLASS	autoload/conque_term/conque_win32_util.py	/^IDLE_PRIORITY_CLASS = 0x00000040$/;"	v
+IMAP	plugin/imaps.vim	/^function! IMAP(lhs, rhs, ft, ...)$/;"	f
+IMAP_Debug	plugin/imaps.vim	/^function! IMAP_Debug(string, pattern)$/;"	f
+IMAP_DebugClear	plugin/imaps.vim	/^function! IMAP_DebugClear(pattern)$/;"	f
+IMAP_GetPlaceHolderEnd	plugin/imaps.vim	/^function! IMAP_GetPlaceHolderEnd()$/;"	f
+IMAP_GetPlaceHolderStart	plugin/imaps.vim	/^function! IMAP_GetPlaceHolderStart()$/;"	f
+IMAP_GetVal	plugin/imaps.vim	/^function! IMAP_GetVal(name, ...)$/;"	f
+IMAP_Jumpfunc	plugin/imaps.vim	/^function! IMAP_Jumpfunc(direction, inclusive)$/;"	f
+IMAP_Mark	plugin/imaps.vim	/^function! IMAP_Mark(action)$/;"	f
+IMAP_PrintDebug	plugin/imaps.vim	/^function! IMAP_PrintDebug(pattern)$/;"	f
+IMAP_PutTextWithMovement	plugin/imaps.vim	/^function! IMAP_PutTextWithMovement(str, ...)$/;"	f
+IMAP_list	plugin/imaps.vim	/^function! IMAP_list(lhs)$/;"	f
+INHERIT_PARENT_AFFINITY	autoload/conque_term/conque_win32_util.py	/^INHERIT_PARENT_AFFINITY = 0x00010000$/;"	v
+INPUT_RECORD	autoload/conque_term/conque_win32_util.py	/^class INPUT_RECORD(Structure):$/;"	c
+INPUT_UNION	autoload/conque_term/conque_win32_util.py	/^class INPUT_UNION(Union):$/;"	c
+Iconv	plugin/imaps.vim	/^function! s:Iconv(text, mode)$/;"	f
+IgnoreWarnings	compiler/tex.vim	/^function! <SID>IgnoreWarnings()$/;"	f
+InitStack	plugin/SyntaxFolds.vim	/^function! InitStack(name)$/;"	f
+IsInSkippedRegion	plugin/SyntaxFolds.vim	/^function! IsInSkippedRegion(lnum, regions)$/;"	f
+KEY_EVENT	autoload/conque_term/conque_win32_util.py	/^KEY_EVENT = 0x0001$/;"	v
+KEY_EVENT_RECORD	autoload/conque_term/conque_win32_util.py	/^class KEY_EVENT_RECORD(Structure):$/;"	c
+LEFT_ALT_PRESSED	autoload/conque_term/conque_win32_util.py	/^LEFT_ALT_PRESSED = 0x0002$/;"	v
+LEFT_CTRL_PRESSED	autoload/conque_term/conque_win32_util.py	/^LEFT_CTRL_PRESSED = 0x0008$/;"	v
+LPBYTE	autoload/conque_term/conque_win32_util.py	/^LPBYTE = POINTER(c_ubyte)$/;"	v
+LPTSTR	autoload/conque_term/conque_win32_util.py	/^LPTSTR = POINTER(c_char)$/;"	v
+ListGitBranches	plugin/git.vim	/^function! ListGitBranches(arg_lead, cmd_line, cursor_pos)$/;"	f
+ListGitCommits	plugin/git.vim	/^function! ListGitCommits(arg_lead, cmd_line, cursor_pos)$/;"	f
+LoadSyntaxRuleFor	plugin/git.vim	/^function! s:LoadSyntaxRuleFor(params)$/;"	f
+LookupCharacter	plugin/imaps.vim	/^function! s:LookupCharacter(char)$/;"	f
+MEMORY_BASIC_INFORMATION	autoload/conque_term/conque_win32_util.py	/^class MEMORY_BASIC_INFORMATION(Structure):$/;"	c
+MENU_EVENT	autoload/conque_term/conque_win32_util.py	/^MENU_EVENT = 0x0008$/;"	v
+MENU_EVENT_RECORD	autoload/conque_term/conque_win32_util.py	/^class MENU_EVENT_RECORD(Structure):$/;"	c
+MOUSE_EVENT	autoload/conque_term/conque_win32_util.py	/^MOUSE_EVENT = 0x0002$/;"	v
+MOUSE_EVENT_RECORD	autoload/conque_term/conque_win32_util.py	/^class MOUSE_EVENT_RECORD(Structure):$/;"	c
+MakeSyntaxFolds	plugin/SyntaxFolds.vim	/^function! MakeSyntaxFolds(force, ...)$/;"	f
+MySearch	plugin/SyntaxFolds.vim	/^function! <SID>MySearch(pat, opt)$/;"	f
+NORMAL_PRIORITY_CLASS	autoload/conque_term/conque_win32_util.py	/^NORMAL_PRIORITY_CLASS = 0x00000020$/;"	v
+NUMLOCK_ON	autoload/conque_term/conque_win32_util.py	/^NUMLOCK_ON = 0x0020$/;"	v
+OpenGitBuffer	plugin/git.vim	/^function! s:OpenGitBuffer(content)$/;"	f
+PROCESS_CREATE_PROCESS	autoload/conque_term/conque_win32_util.py	/^PROCESS_CREATE_PROCESS = 0x0080$/;"	v
+PROCESS_CREATE_THREAD	autoload/conque_term/conque_win32_util.py	/^PROCESS_CREATE_THREAD = 0x0002$/;"	v
+PROCESS_DUP_HANDLE	autoload/conque_term/conque_win32_util.py	/^PROCESS_DUP_HANDLE = 0x0040$/;"	v
+PROCESS_INFORMATION	autoload/conque_term/conque_win32_util.py	/^class PROCESS_INFORMATION(Structure):$/;"	c
+PROCESS_QUERY_INFORMATION	autoload/conque_term/conque_win32_util.py	/^PROCESS_QUERY_INFORMATION = 0x0400$/;"	v
+PROCESS_QUERY_LIMITED_INFORMATION	autoload/conque_term/conque_win32_util.py	/^PROCESS_QUERY_LIMITED_INFORMATION = 0x1000$/;"	v
+PROCESS_SET_INFORMATION	autoload/conque_term/conque_win32_util.py	/^PROCESS_SET_INFORMATION = 0x0200$/;"	v
+PROCESS_SET_QUOTA	autoload/conque_term/conque_win32_util.py	/^PROCESS_SET_QUOTA = 0x0100$/;"	v
+PROCESS_SUSPEND_RESUME	autoload/conque_term/conque_win32_util.py	/^PROCESS_SUSPEND_RESUME = 0x0800$/;"	v
+PROCESS_TERMINATE	autoload/conque_term/conque_win32_util.py	/^PROCESS_TERMINATE = 0x0001$/;"	v
+PROCESS_VM_OPERATION	autoload/conque_term/conque_win32_util.py	/^PROCESS_VM_OPERATION = 0x0008$/;"	v
+PROCESS_VM_READ	autoload/conque_term/conque_win32_util.py	/^PROCESS_VM_READ = 0x0010$/;"	v
+PROCESS_VM_WRITE	autoload/conque_term/conque_win32_util.py	/^PROCESS_VM_WRITE = 0x0020$/;"	v
+Pop	plugin/SyntaxFolds.vim	/^function! Pop(name)$/;"	f
+Push	plugin/SyntaxFolds.vim	/^function! Push(name, elem)$/;"	f
+QuickSortList	plugin/libList.vim	/^function QuickSortList( array, beg, end )$/;"	f
+REALTIME_PRIORITY_CLASS	autoload/conque_term/conque_win32_util.py	/^REALTIME_PRIORITY_CLASS = 0x00000100$/;"	v
+RIGHT_ALT_PRESSED	autoload/conque_term/conque_win32_util.py	/^RIGHT_ALT_PRESSED = 0x0001$/;"	v
+RIGHT_CTRL_PRESSED	autoload/conque_term/conque_win32_util.py	/^RIGHT_CTRL_PRESSED = 0x0004$/;"	v
+RefreshGitStatus	plugin/git.vim	/^function! s:RefreshGitStatus()$/;"	f
+RemoteInsert	plugin/remoteOpen.vim	/^com! -nargs=? RemoteInsert :call RemoteInsert('<args>')$/;"	c
+RemoteInsert	plugin/remoteOpen.vim	/^function! RemoteInsert(...)$/;"	f
+RemoteOpen	plugin/remoteOpen.vim	/^com! -nargs=1 RemoteOpen :call RemoteOpen('<args>')$/;"	c
+RemoteOpen	plugin/remoteOpen.vim	/^function! RemoteOpen(arglist)$/;"	f
+RemoveListItem	plugin/libList.vim	/^function RemoveListItem( array, index )$/;"	f
+ReplaceListItem	plugin/libList.vim	/^function ReplaceListItem( array, index, item )$/;"	f
+SCROLLLOCK_ON	autoload/conque_term/conque_win32_util.py	/^SCROLLLOCK_ON = 0x0040$/;"	v
+SECURITY_ATTRIBUTES	autoload/conque_term/conque_win32_util.py	/^class SECURITY_ATTRIBUTES(Structure):$/;"	c
+SHIFT_PRESSED	autoload/conque_term/conque_win32_util.py	/^SHIFT_PRESSED = 0x0010$/;"	v
+SMALL_RECT	autoload/conque_term/conque_win32_util.py	/^class SMALL_RECT(Structure):$/;"	c
+STARTF_FORCEOFFFEEDBACK	autoload/conque_term/conque_win32_util.py	/^STARTF_FORCEOFFFEEDBACK = 0x00000080$/;"	v
+STARTF_FORCEONFEEDBACK	autoload/conque_term/conque_win32_util.py	/^STARTF_FORCEONFEEDBACK = 0x00000040$/;"	v
+STARTF_PREVENTPINNING	autoload/conque_term/conque_win32_util.py	/^STARTF_PREVENTPINNING = 0x00002000$/;"	v
+STARTF_RUNFULLSCREEN	autoload/conque_term/conque_win32_util.py	/^STARTF_RUNFULLSCREEN = 0x00000020$/;"	v
+STARTF_TITLEISAPPID	autoload/conque_term/conque_win32_util.py	/^STARTF_TITLEISAPPID = 0x00001000$/;"	v
+STARTF_TITLEISLINKNAME	autoload/conque_term/conque_win32_util.py	/^STARTF_TITLEISLINKNAME = 0x00000800$/;"	v
+STARTF_USECOUNTCHARS	autoload/conque_term/conque_win32_util.py	/^STARTF_USECOUNTCHARS = 0x00000008$/;"	v
+STARTF_USEFILLATTRIBUTE	autoload/conque_term/conque_win32_util.py	/^STARTF_USEFILLATTRIBUTE = 0x00000010$/;"	v
+STARTF_USEHOTKEY	autoload/conque_term/conque_win32_util.py	/^STARTF_USEHOTKEY = 0x00000200$/;"	v
+STARTF_USEPOSITION	autoload/conque_term/conque_win32_util.py	/^STARTF_USEPOSITION = 0x00000004$/;"	v
+STARTF_USESHOWWINDOW	autoload/conque_term/conque_win32_util.py	/^STARTF_USESHOWWINDOW = 0x00000001$/;"	v
+STARTF_USESIZE	autoload/conque_term/conque_win32_util.py	/^STARTF_USESIZE = 0x00000002$/;"	v
+STARTF_USESTDHANDLES	autoload/conque_term/conque_win32_util.py	/^STARTF_USESTDHANDLES = 0x00000100$/;"	v
+STARTUPINFO	autoload/conque_term/conque_win32_util.py	/^class STARTUPINFO(Structure):$/;"	c
+STD_ERROR_HANDLE	autoload/conque_term/conque_win32_util.py	/^STD_ERROR_HANDLE = c_ulong(-12)$/;"	v
+STD_INPUT_HANDLE	autoload/conque_term/conque_win32_util.py	/^STD_INPUT_HANDLE = c_ulong(-10)$/;"	v
+STD_OUTPUT_HANDLE	autoload/conque_term/conque_win32_util.py	/^STD_OUTPUT_HANDLE = c_ulong(-11)$/;"	v
+SW_FORCEMINIMIZE	autoload/conque_term/conque_win32_util.py	/^SW_FORCEMINIMIZE = 11$/;"	v
+SW_HIDE	autoload/conque_term/conque_win32_util.py	/^SW_HIDE = 0$/;"	v
+SW_MAXIMIZE	autoload/conque_term/conque_win32_util.py	/^SW_MAXIMIZE = 3$/;"	v
+SW_MINIMIZE	autoload/conque_term/conque_win32_util.py	/^SW_MINIMIZE = 6$/;"	v
+SW_RESTORE	autoload/conque_term/conque_win32_util.py	/^SW_RESTORE = 9$/;"	v
+SW_SHOW	autoload/conque_term/conque_win32_util.py	/^SW_SHOW = 5$/;"	v
+SW_SHOWDEFAULT	autoload/conque_term/conque_win32_util.py	/^SW_SHOWDEFAULT = 10$/;"	v
+SW_SHOWMAXIMIZED	autoload/conque_term/conque_win32_util.py	/^SW_SHOWMAXIMIZED = 3$/;"	v
+SW_SHOWMINIMIZED	autoload/conque_term/conque_win32_util.py	/^SW_SHOWMINIMIZED = 2$/;"	v
+SW_SHOWMINNOACTIVE	autoload/conque_term/conque_win32_util.py	/^SW_SHOWMINNOACTIVE = 7$/;"	v
+SW_SHOWNA	autoload/conque_term/conque_win32_util.py	/^SW_SHOWNA = 8$/;"	v
+SW_SHOWNOACTIVATE	autoload/conque_term/conque_win32_util.py	/^SW_SHOWNOACTIVATE = 4$/;"	v
+SW_SHOWNORMAL	autoload/conque_term/conque_win32_util.py	/^SW_SHOWNORMAL = 1$/;"	v
+SearchComplete	plugin/SearchComplete.vim	/^function! SearchComplete()$/;"	f
+SearchCompleteStart	plugin/SearchComplete.vim	/^function! SearchCompleteStart()$/;"	f
+SearchCompleteStop	plugin/SearchComplete.vim	/^function! SearchCompleteStop()$/;"	f
+SetLatexEfm	compiler/tex.vim	/^function! <SID>SetLatexEfm()$/;"	f
+SetTexCompilerLevel	compiler/tex.vim	/^function! <SID>SetTexCompilerLevel(...)$/;"	f
+Snip	plugin/imaps.vim	/^com! -nargs=0 -range Snip :<line1>,<line2>call <SID>Snip()$/;"	c
+Snip	plugin/imaps.vim	/^function! <SID>Snip() range$/;"	f
+Strntok	compiler/tex.vim	/^fun! <SID>Strntok(s, tok, n)$/;"	f
+Strntok	plugin/SyntaxFolds.vim	/^fun! <SID>Strntok(s, tok, n)$/;"	f
+Strntok	plugin/imaps.vim	/^fun! <SID>Strntok(s, tok, n)$/;"	f
+Strntok	plugin/remoteOpen.vim	/^fun! <SID>Strntok(s, tok, n)$/;"	f
+SystemGit	plugin/git.vim	/^function! s:SystemGit(args)$/;"	f
+TCLevel	compiler/tex.vim	/^com! -nargs=? TCLevel :call <SID>SetTexCompilerLevel(<f-args>)$/;"	c
+TERMINATOR	autoload/conque_term/conque_sole_shared_memory.py	/^    TERMINATOR = None$/;"	v	class:ConqueSoleSharedMemory
+TagList_IsValid	plugin/taglist.vim	/^function! TagList_IsValid()$/;"	f
+TagList_Start	plugin/taglist.vim	/^function! TagList_Start()$/;"	f
+TagList_WrapUp	plugin/taglist.vim	/^function! TagList_WrapUp()$/;"	f
+TagList_title	plugin/taglist.vim	/^    let TagList_title = "__Tag_List__"$/;"	v
+Testing	plugin/test.vim	/^command! -nargs=0 Testing call Testing()$/;"	c
+Testing	plugin/test.vim	/^function! Testing()$/;"	f
+Tex_Debug	compiler/tex.vim	/^	function! Tex_Debug(...)$/;"	f
+Tlist	plugin/taglist.vim	/^    command! -nargs=0 -bar Tlist TlistToggle$/;"	c
+TlistAddFiles	plugin/taglist.vim	/^    command! -nargs=+ -complete=file TlistAddFiles$/;"	c
+TlistAddFilesRecursive	plugin/taglist.vim	/^    command! -nargs=+ -complete=dir TlistAddFilesRecursive$/;"	c
+TlistClose	plugin/taglist.vim	/^    command! -nargs=0 -bar TlistClose call s:Tlist_Window_Close()$/;"	c
+TlistDebug	plugin/taglist.vim	/^    command! -nargs=? -complete=file -bar TlistDebug$/;"	c
+TlistHighlightTag	plugin/taglist.vim	/^    command! -nargs=0 -bar TlistHighlightTag call s:Tlist_Window_Highlight_Tag($/;"	c
+TlistLock	plugin/taglist.vim	/^    command! -bar TlistLock let Tlist_Auto_Update=0$/;"	c
+TlistMessages	plugin/taglist.vim	/^    command! -nargs=0 -bar TlistMessages call s:Tlist_Debug_Show()$/;"	c
+TlistOpen	plugin/taglist.vim	/^    command! -nargs=0 -bar TlistOpen call s:Tlist_Window_Open()$/;"	c
+TlistSessionLoad	plugin/taglist.vim	/^    command! -nargs=* -complete=file TlistSessionLoad$/;"	c
+TlistSessionSave	plugin/taglist.vim	/^    command! -nargs=* -complete=file TlistSessionSave$/;"	c
+TlistShowPrototype	plugin/taglist.vim	/^    command! -nargs=* -complete=buffer TlistShowPrototype$/;"	c
+TlistShowTag	plugin/taglist.vim	/^    command! -nargs=* -complete=buffer TlistShowTag$/;"	c
+TlistSync	plugin/taglist.vim	/^    command! -nargs=0 -bar TlistSync TlistHighlightTag$/;"	c
+TlistToggle	plugin/taglist.vim	/^    command! -nargs=0 -bar TlistToggle call s:Tlist_Window_Toggle()$/;"	c
+TlistUndebug	plugin/taglist.vim	/^    command! -nargs=0 -bar TlistUndebug  call s:Tlist_Debug_Disable()$/;"	c
+TlistUnlock	plugin/taglist.vim	/^    command! -bar TlistUnlock let Tlist_Auto_Update=1$/;"	c
+TlistUpdate	plugin/taglist.vim	/^    command! -nargs=0 -bar TlistUpdate call s:Tlist_Update_Current_File()$/;"	c
+Tlist_Add_Files	plugin/taglist.vim	/^function! s:Tlist_Add_Files(...)$/;"	f
+Tlist_Add_Files_Recursive	plugin/taglist.vim	/^function! s:Tlist_Add_Files_Recursive(dir, ...)$/;"	f
+Tlist_Auto_Highlight_Tag	plugin/taglist.vim	/^        let Tlist_Auto_Highlight_Tag = 1$/;"	v
+Tlist_Auto_Open	plugin/taglist.vim	/^        let Tlist_Auto_Open = 0$/;"	v
+Tlist_Auto_Update	plugin/taglist.vim	/^        let Tlist_Auto_Update = 1$/;"	v
+Tlist_Ballon_Expr	plugin/taglist.vim	/^function! Tlist_Ballon_Expr()$/;"	f
+Tlist_Buffer_Removed	plugin/taglist.vim	/^function! s:Tlist_Buffer_Removed(filename)$/;"	f
+Tlist_Change_Sort	plugin/taglist.vim	/^function! s:Tlist_Change_Sort(caller, action, sort_type)$/;"	f
+Tlist_Close_On_Select	plugin/taglist.vim	/^        let Tlist_Close_On_Select = 0$/;"	v
+Tlist_Compact_Format	plugin/taglist.vim	/^        let Tlist_Compact_Format = 0$/;"	v
+Tlist_Ctags_Cmd	plugin/taglist.vim	/^            let Tlist_Ctags_Cmd = 'ctags'$/;"	v
+Tlist_Ctags_Cmd	plugin/taglist.vim	/^            let Tlist_Ctags_Cmd = 'ctags.exe'$/;"	v
+Tlist_Ctags_Cmd	plugin/taglist.vim	/^            let Tlist_Ctags_Cmd = 'exctags'$/;"	v
+Tlist_Ctags_Cmd	plugin/taglist.vim	/^            let Tlist_Ctags_Cmd = 'exuberant-ctags'$/;"	v
+Tlist_Ctags_Cmd	plugin/taglist.vim	/^            let Tlist_Ctags_Cmd = 'tags'$/;"	v
+Tlist_Debug_Disable	plugin/taglist.vim	/^function! s:Tlist_Debug_Disable(...)$/;"	f
+Tlist_Debug_Enable	plugin/taglist.vim	/^function! s:Tlist_Debug_Enable(...)$/;"	f
+Tlist_Debug_Show	plugin/taglist.vim	/^function! s:Tlist_Debug_Show()$/;"	f
+Tlist_Detect_Filetype	plugin/taglist.vim	/^function! s:Tlist_Detect_Filetype(fname)$/;"	f
+Tlist_Discard_FileInfo	plugin/taglist.vim	/^function! s:Tlist_Discard_FileInfo(fidx)$/;"	f
+Tlist_Discard_TagInfo	plugin/taglist.vim	/^function! s:Tlist_Discard_TagInfo(fidx)$/;"	f
+Tlist_Display_Prototype	plugin/taglist.vim	/^        let Tlist_Display_Prototype = 0$/;"	v
+Tlist_Display_Tag_Scope	plugin/taglist.vim	/^        let Tlist_Display_Tag_Scope = 1$/;"	v
+Tlist_Enable_Fold_Column	plugin/taglist.vim	/^        let Tlist_Enable_Fold_Column = 1$/;"	v
+Tlist_Exe_Cmd_No_Acmds	plugin/taglist.vim	/^function! s:Tlist_Exe_Cmd_No_Acmds(cmd)$/;"	f
+Tlist_Exit_OnlyWindow	plugin/taglist.vim	/^        let Tlist_Exit_OnlyWindow = 0$/;"	v
+Tlist_Extract_Tag_Scope	plugin/taglist.vim	/^function! s:Tlist_Extract_Tag_Scope(tag_line)$/;"	f
+Tlist_Extract_Tagtype	plugin/taglist.vim	/^function! s:Tlist_Extract_Tagtype(tag_line)$/;"	f
+Tlist_FileType_Init	plugin/taglist.vim	/^function! s:Tlist_FileType_Init(ftype)$/;"	f
+Tlist_File_Fold_Auto_Close	plugin/taglist.vim	/^        let Tlist_File_Fold_Auto_Close = 0$/;"	v
+Tlist_Find_Nearest_Tag_Idx	plugin/taglist.vim	/^function! s:Tlist_Find_Nearest_Tag_Idx(fidx, linenum)$/;"	f
+Tlist_GainFocus_On_ToggleOpen	plugin/taglist.vim	/^        let Tlist_GainFocus_On_ToggleOpen = 0$/;"	v
+Tlist_Get_Buffer_Filetype	plugin/taglist.vim	/^function! s:Tlist_Get_Buffer_Filetype(bnum)$/;"	f
+Tlist_Get_File_Index	plugin/taglist.vim	/^function! s:Tlist_Get_File_Index(fname)$/;"	f
+Tlist_Get_Tag_Linenum	plugin/taglist.vim	/^function! s:Tlist_Get_Tag_Linenum(fidx, tidx)$/;"	f
+Tlist_Get_Tag_Prototype	plugin/taglist.vim	/^function! s:Tlist_Get_Tag_Prototype(fidx, tidx)$/;"	f
+Tlist_Get_Tag_Prototype_By_Line	plugin/taglist.vim	/^function! Tlist_Get_Tag_Prototype_By_Line(...)$/;"	f
+Tlist_Get_Tag_SearchPat	plugin/taglist.vim	/^function! s:Tlist_Get_Tag_SearchPat(fidx, tidx)$/;"	f
+Tlist_Get_Tag_Type_By_Tag	plugin/taglist.vim	/^function! s:Tlist_Get_Tag_Type_By_Tag(fidx, tidx)$/;"	f
+Tlist_Get_Tagname_By_Line	plugin/taglist.vim	/^function! Tlist_Get_Tagname_By_Line(...)$/;"	f
+Tlist_Highlight_Tag_On_BufEnter	plugin/taglist.vim	/^        let Tlist_Highlight_Tag_On_BufEnter = 1$/;"	v
+Tlist_Inc_Winwidth	plugin/taglist.vim	/^            let Tlist_Inc_Winwidth = 0$/;"	v
+Tlist_Inc_Winwidth	plugin/taglist.vim	/^            let Tlist_Inc_Winwidth = 1$/;"	v
+Tlist_Init_File	plugin/taglist.vim	/^function! s:Tlist_Init_File(filename, ftype)$/;"	f
+Tlist_Log_Msg	plugin/taglist.vim	/^function! s:Tlist_Log_Msg(msg)$/;"	f
+Tlist_Max_Submenu_Items	plugin/taglist.vim	/^        let Tlist_Max_Submenu_Items = 20$/;"	v
+Tlist_Max_Tag_Length	plugin/taglist.vim	/^        let Tlist_Max_Tag_Length = 10$/;"	v
+Tlist_Menu_Add_Base_Menu	plugin/taglist.vim	/^function! s:Tlist_Menu_Add_Base_Menu()$/;"	f
+Tlist_Menu_File_Refresh	plugin/taglist.vim	/^function! s:Tlist_Menu_File_Refresh(fidx)$/;"	f
+Tlist_Menu_Get_Tag_Type_Cmd	plugin/taglist.vim	/^function! s:Tlist_Menu_Get_Tag_Type_Cmd(fidx, ftype, add_ttype_name, ttype_idx)$/;"	f
+Tlist_Menu_Init	plugin/taglist.vim	/^function! s:Tlist_Menu_Init()$/;"	f
+Tlist_Menu_Jump_To_Tag	plugin/taglist.vim	/^function! s:Tlist_Menu_Jump_To_Tag(tidx)$/;"	f
+Tlist_Menu_Refresh	plugin/taglist.vim	/^function! s:Tlist_Menu_Refresh()$/;"	f
+Tlist_Menu_Remove_File	plugin/taglist.vim	/^function! s:Tlist_Menu_Remove_File()$/;"	f
+Tlist_Menu_Update_File	plugin/taglist.vim	/^function! s:Tlist_Menu_Update_File(clear_menu)$/;"	f
+Tlist_Parse_Tagline	plugin/taglist.vim	/^function! s:Tlist_Parse_Tagline(tag_line)$/;"	f
+Tlist_Post_Close_Cleanup	plugin/taglist.vim	/^function! s:Tlist_Post_Close_Cleanup()$/;"	f
+Tlist_Process_Dir	plugin/taglist.vim	/^function! s:Tlist_Process_Dir(dir_name, pat)$/;"	f
+Tlist_Process_File	plugin/taglist.vim	/^function! s:Tlist_Process_File(filename, ftype)$/;"	f
+Tlist_Process_File_Always	plugin/taglist.vim	/^        let Tlist_Process_File_Always = 0$/;"	v
+Tlist_Process_Filelist	plugin/taglist.vim	/^function! s:Tlist_Process_Filelist(file_names)$/;"	f
+Tlist_Refresh	plugin/taglist.vim	/^function! s:Tlist_Refresh()$/;"	f
+Tlist_Refresh_Folds	plugin/taglist.vim	/^function! s:Tlist_Refresh_Folds()$/;"	f
+Tlist_Remove_File	plugin/taglist.vim	/^function! s:Tlist_Remove_File(file_idx, user_request)$/;"	f
+Tlist_Session_Load	plugin/taglist.vim	/^function! s:Tlist_Session_Load(...)$/;"	f
+Tlist_Session_Save	plugin/taglist.vim	/^function! s:Tlist_Session_Save(...)$/;"	f
+Tlist_Set_App	plugin/taglist.vim	/^function! Tlist_Set_App(name)$/;"	f
+Tlist_Show_Menu	plugin/taglist.vim	/^        let Tlist_Show_Menu = 0$/;"	v
+Tlist_Show_One_File	plugin/taglist.vim	/^        let Tlist_Show_One_File = 0$/;"	v
+Tlist_Skip_File	plugin/taglist.vim	/^function! s:Tlist_Skip_File(filename, ftype)$/;"	f
+Tlist_Sort_Type	plugin/taglist.vim	/^        let Tlist_Sort_Type = 'order'$/;"	v
+Tlist_Update_Current_File	plugin/taglist.vim	/^function! s:Tlist_Update_Current_File()$/;"	f
+Tlist_Update_File	plugin/taglist.vim	/^function! Tlist_Update_File(filename, ftype)$/;"	f
+Tlist_Update_Remove_List	plugin/taglist.vim	/^function! s:Tlist_Update_Remove_List(filename, add)$/;"	f
+Tlist_Use_Horiz_Window	plugin/taglist.vim	/^        let Tlist_Use_Horiz_Window = 0$/;"	v
+Tlist_Use_Right_Window	plugin/taglist.vim	/^        let Tlist_Use_Right_Window = 0$/;"	v
+Tlist_Use_SingleClick	plugin/taglist.vim	/^        let Tlist_Use_SingleClick = 0$/;"	v
+Tlist_User_Removed_File	plugin/taglist.vim	/^function! s:Tlist_User_Removed_File(filename)$/;"	f
+Tlist_Vim_Session_Load	plugin/taglist.vim	/^function! s:Tlist_Vim_Session_Load()$/;"	f
+Tlist_Warning_Msg	plugin/taglist.vim	/^function! s:Tlist_Warning_Msg(msg)$/;"	f
+Tlist_WinHeight	plugin/taglist.vim	/^        let Tlist_WinHeight = 10$/;"	v
+Tlist_WinWidth	plugin/taglist.vim	/^        let Tlist_WinWidth = 30$/;"	v
+Tlist_Window_Check_Auto_Open	plugin/taglist.vim	/^function! s:Tlist_Window_Check_Auto_Open()$/;"	f
+Tlist_Window_Check_Width	plugin/taglist.vim	/^function! s:Tlist_Window_Check_Width()$/;"	f
+Tlist_Window_Close	plugin/taglist.vim	/^function! s:Tlist_Window_Close()$/;"	f
+Tlist_Window_Create	plugin/taglist.vim	/^function! s:Tlist_Window_Create()$/;"	f
+Tlist_Window_Display_Help	plugin/taglist.vim	/^function! s:Tlist_Window_Display_Help()$/;"	f
+Tlist_Window_Exit_Only_Window	plugin/taglist.vim	/^function! s:Tlist_Window_Exit_Only_Window()$/;"	f
+Tlist_Window_Get_File_Index_By_Linenum	plugin/taglist.vim	/^function! s:Tlist_Window_Get_File_Index_By_Linenum(lnum)$/;"	f
+Tlist_Window_Get_Tag_Index	plugin/taglist.vim	/^function! s:Tlist_Window_Get_Tag_Index(fidx, lnum)$/;"	f
+Tlist_Window_Get_Tag_Type_By_Linenum	plugin/taglist.vim	/^function! s:Tlist_Window_Get_Tag_Type_By_Linenum(fidx, lnum)$/;"	f
+Tlist_Window_Goto_Window	plugin/taglist.vim	/^function! s:Tlist_Window_Goto_Window()$/;"	f
+Tlist_Window_Highlight_Line	plugin/taglist.vim	/^function! s:Tlist_Window_Highlight_Line()$/;"	f
+Tlist_Window_Highlight_Tag	plugin/taglist.vim	/^function! s:Tlist_Window_Highlight_Tag(filename, cur_lnum, cntx, center)$/;"	f
+Tlist_Window_Init	plugin/taglist.vim	/^function! s:Tlist_Window_Init()$/;"	f
+Tlist_Window_Jump_To_Tag	plugin/taglist.vim	/^function! s:Tlist_Window_Jump_To_Tag(win_ctrl)$/;"	f
+Tlist_Window_Mark_File_Window	plugin/taglist.vim	/^function! s:Tlist_Window_Mark_File_Window()$/;"	f
+Tlist_Window_Move_To_File	plugin/taglist.vim	/^function! s:Tlist_Window_Move_To_File(dir)$/;"	f
+Tlist_Window_Open	plugin/taglist.vim	/^function! s:Tlist_Window_Open()$/;"	f
+Tlist_Window_Open_File	plugin/taglist.vim	/^function! s:Tlist_Window_Open_File(win_ctrl, filename, tagpat)$/;"	f
+Tlist_Window_Open_File_Fold	plugin/taglist.vim	/^function! s:Tlist_Window_Open_File_Fold(acmd_bufnr)$/;"	f
+Tlist_Window_Refresh	plugin/taglist.vim	/^function! s:Tlist_Window_Refresh()$/;"	f
+Tlist_Window_Refresh_File	plugin/taglist.vim	/^function! s:Tlist_Window_Refresh_File(filename, ftype)$/;"	f
+Tlist_Window_Remove_File_From_Display	plugin/taglist.vim	/^function! s:Tlist_Window_Remove_File_From_Display(fidx)$/;"	f
+Tlist_Window_Show_Info	plugin/taglist.vim	/^function! s:Tlist_Window_Show_Info()$/;"	f
+Tlist_Window_Toggle	plugin/taglist.vim	/^function! s:Tlist_Window_Toggle()$/;"	f
+Tlist_Window_Toggle_Help_Text	plugin/taglist.vim	/^function! s:Tlist_Window_Toggle_Help_Text()$/;"	f
+Tlist_Window_Update_File	plugin/taglist.vim	/^function! s:Tlist_Window_Update_File()$/;"	f
+Tlist_Window_Update_Line_Offsets	plugin/taglist.vim	/^function! s:Tlist_Window_Update_Line_Offsets(start_idx, increment, offset)$/;"	f
+Tlist_Window_Zoom	plugin/taglist.vim	/^function! s:Tlist_Window_Zoom()$/;"	f
+VEnclose	plugin/imaps.vim	/^function! VEnclose(vstart, vend, VStart, VEnd)$/;"	f
+WINDOW_BUFFER_SIZE_EVENT	autoload/conque_term/conque_win32_util.py	/^WINDOW_BUFFER_SIZE_EVENT = 0x0004$/;"	v
+WINDOW_BUFFER_SIZE_RECORD	autoload/conque_term/conque_win32_util.py	/^class WINDOW_BUFFER_SIZE_RECORD(Structure):$/;"	c
+__delitem__	autoload/conque_term/conque_screen.py	/^    def __delitem__(self, key):$/;"	m	class:ConqueScreen	file:
+__getitem__	autoload/conque_term/conque_screen.py	/^    def __getitem__(self, key):$/;"	m	class:ConqueScreen	file:
+__init__	autoload/conque_term/conque_screen.py	/^    def __init__(self):$/;"	m	class:ConqueScreen
+__init__	autoload/conque_term/conque_sole_shared_memory.py	/^    def __init__(self, mem_size, mem_type, mem_key, fixed_length=False, fill_char=' ', serialize=False, encoding='utf-8'):$/;"	m	class:ConqueSoleSharedMemory
+__len__	autoload/conque_term/conque_screen.py	/^    def __len__(self):$/;"	m	class:ConqueScreen	file:
+__setitem__	autoload/conque_term/conque_screen.py	/^    def __setitem__(self, key, value):$/;"	m	class:ConqueScreen	file:
+_fields_	autoload/conque_term/conque_win32_util.py	/^    _fields_ = [("BaseAddress",       c_void_p),$/;"	v	class:MEMORY_BASIC_INFORMATION
+_fields_	autoload/conque_term/conque_win32_util.py	/^    _fields_ = [("Char", CHAR_UNION),$/;"	v	class:CHAR_INFO
+_fields_	autoload/conque_term/conque_win32_util.py	/^    _fields_ = [("EventType", c_short),$/;"	v	class:INPUT_RECORD
+_fields_	autoload/conque_term/conque_win32_util.py	/^    _fields_ = [("KeyEvent", KEY_EVENT_RECORD),$/;"	v	class:INPUT_UNION
+_fields_	autoload/conque_term/conque_win32_util.py	/^    _fields_ = [("Left", c_short),$/;"	v	class:SMALL_RECT
+_fields_	autoload/conque_term/conque_win32_util.py	/^    _fields_ = [("Length", c_ulong),$/;"	v	class:SECURITY_ATTRIBUTES
+_fields_	autoload/conque_term/conque_win32_util.py	/^    _fields_ = [("UnicodeChar", c_wchar),$/;"	v	class:CHAR_UNION
+_fields_	autoload/conque_term/conque_win32_util.py	/^    _fields_ = [("X", c_short),$/;"	v	class:COORD
+_fields_	autoload/conque_term/conque_win32_util.py	/^    _fields_ = [("bKeyDown", c_byte),$/;"	v	class:KEY_EVENT_RECORD
+_fields_	autoload/conque_term/conque_win32_util.py	/^    _fields_ = [("bSetFocus", c_byte)]$/;"	v	class:FOCUS_EVENT_RECORD
+_fields_	autoload/conque_term/conque_win32_util.py	/^    _fields_ = [("cb",            c_ulong),$/;"	v	class:STARTUPINFO
+_fields_	autoload/conque_term/conque_win32_util.py	/^    _fields_ = [("dwCommandId", c_uint)]$/;"	v	class:MENU_EVENT_RECORD
+_fields_	autoload/conque_term/conque_win32_util.py	/^    _fields_ = [("dwMousePosition", COORD),$/;"	v	class:MOUSE_EVENT_RECORD
+_fields_	autoload/conque_term/conque_win32_util.py	/^    _fields_ = [("dwSize", COORD),$/;"	v	class:CONSOLE_SCREEN_BUFFER_INFO
+_fields_	autoload/conque_term/conque_win32_util.py	/^    _fields_ = [("dwSize", COORD)]$/;"	v	class:WINDOW_BUFFER_SIZE_RECORD
+_fields_	autoload/conque_term/conque_win32_util.py	/^    _fields_ = [("hProcess",    c_void_p),$/;"	v	class:PROCESS_INFORMATION
+abort	autoload/conque_term/conque.py	/^    def abort(self):$/;"	m	class:Conque
+abort	autoload/conque_term/conque_sole.py	/^    def abort(self):$/;"	m	class:ConqueSole
+absolute_coords	autoload/conque_term/conque.py	/^    absolute_coords = True$/;"	v	class:Conque
+add_conceal_color	autoload/conque_term/conque_sole.py	/^    def add_conceal_color(self, text, attributes, stats, line_nr):$/;"	m	class:ConqueSole
+align	autoload/conque_term/conque_screen.py	/^    def align(self):$/;"	m	class:ConqueScreen
+append	autoload/conque_term/conque_screen.py	/^    def append(self, value):$/;"	m	class:ConqueScreen
+apply_color	autoload/conque_term/conque.py	/^    def apply_color(self, start, end, line=0):$/;"	m	class:Conque
+attribute_cache	autoload/conque_term/conque_sole.py	/^    attribute_cache = {}$/;"	v	class:ConqueSole
+attribute_cache	autoload/conque_term/conque_sole_subprocess.py	/^    attribute_cache = {}$/;"	v	class:ConqueSoleSubprocess
+attributes	autoload/conque_term/conque_sole_subprocess.py	/^    attributes = []$/;"	v	class:ConqueSoleSubprocess
+auto_read	autoload/conque_term/conque.py	/^    def auto_read(self):$/;"	m	class:Conque
+autowrap	autoload/conque_term/conque.py	/^    autowrap = True$/;"	v	class:Conque
+b:current_syntax	syntax/cpp.vim	/^let b:current_syntax = "cpp"$/;"	v
+b:current_syntax	syntax/python3.0.vim	/^let b:current_syntax = "python"$/;"	v
+b:did_indent	indent/tex.vim	/^let b:did_indent = 1$/;"	v
+b:doneTexCompiler	compiler/tex.vim	/^let b:doneTexCompiler = 1$/;"	v
+beep	plugin/surround.vim	/^function! s:beep()$/;"	f
+bottom	autoload/conque_term/conque.py	/^    bottom = 24 # relative to top of screen$/;"	v	class:Conque
+bound	autoload/conque_term/conque.py	/^    def bound(self, val, min, max):$/;"	m	class:Conque
+bucket	autoload/conque_term/conque_sole_wrapper.py	/^    bucket = None$/;"	v	class:ConqueSoleWrapper
+buffer	autoload/conque_term/conque_screen.py	/^    buffer = None$/;"	v	class:ConqueScreen
+buffer	autoload/conque_term/conque_sole.py	/^    buffer = None$/;"	v	class:ConqueSole
+buffer_height	autoload/conque_term/conque_sole_subprocess.py	/^    buffer_height = 100$/;"	v	class:ConqueSoleSubprocess
+buffer_redraw_ct	autoload/conque_term/conque_sole.py	/^    buffer_redraw_ct = 1$/;"	v	class:ConqueSole
+buffer_width	autoload/conque_term/conque_sole_subprocess.py	/^    buffer_width = 160$/;"	v	class:ConqueSoleSubprocess
+c	autoload/conque_term/conque.py	/^    c = 1 # current cursor column$/;"	v	class:Conque
+change_title	autoload/conque_term/conque.py	/^    def change_title(self, key, val):$/;"	m	class:Conque
+changesurround	plugin/surround.vim	/^function! s:changesurround() " {{{1$/;"	f
+char_width	autoload/conque_term/conque_sole_shared_memory.py	/^    char_width = 1$/;"	v	class:ConqueSoleSharedMemory
+character_set	autoload/conque_term/conque.py	/^    character_set = 'ascii'$/;"	v	class:Conque
+charset_graphics	autoload/conque_term/conque.py	/^    def charset_graphics(self):$/;"	m	class:Conque
+charset_uk	autoload/conque_term/conque.py	/^    def charset_uk(self):$/;"	m	class:Conque
+charset_us	autoload/conque_term/conque.py	/^    def charset_us(self):$/;"	m	class:Conque
+check_commands	autoload/conque_term/conque_sole_subprocess.py	/^    def check_commands(self):$/;"	m	class:ConqueSoleSubprocess
+clear	autoload/conque_term/conque_screen.py	/^    def clear(self):$/;"	m	class:ConqueScreen
+clear	autoload/conque_term/conque_sole_shared_memory.py	/^    def clear(self, start=0):$/;"	m	class:ConqueSoleSharedMemory
+close	autoload/conque_term/conque.py	/^    def close(self):$/;"	m	class:Conque
+close	autoload/conque_term/conque_sole.py	/^    def close(self):$/;"	m	class:ConqueSole
+close	autoload/conque_term/conque_sole_shared_memory.py	/^    def close(self):$/;"	m	class:ConqueSoleSharedMemory
+close	autoload/conque_term/conque_sole_subprocess.py	/^    def close(self):$/;"	m	class:ConqueSoleSubprocess
+close	autoload/conque_term/conque_sole_wrapper.py	/^    def close(self):$/;"	m	class:ConqueSoleWrapper
+close	autoload/conque_term/conque_subprocess.py	/^    def close(self):$/;"	m	class:ConqueSubprocess
+close_pid	autoload/conque_term/conque_sole_subprocess.py	/^    def close_pid(self, pid):$/;"	m	class:ConqueSoleSubprocess
+closematch	plugin/surround.vim	/^function! s:closematch(str) " {{{1$/;"	f
+cmd	autoload/conque_term/conque_sole_communicator.py	/^                cmd = shm_command.read()$/;"	v
+cmd	autoload/conque_term/conque_sole_communicator.py	/^        cmd = shm_command.read()$/;"	v
+cmd_line	autoload/conque_term/conque_sole_communicator.py	/^        cmd_line = " ".join(sys.argv[6:])$/;"	v
+code_page	autoload/conque_term/conque_sole_communicator.py	/^        code_page = int(sys.argv[4])$/;"	v
+color_cache	autoload/conque_term/conque_sole.py	/^    color_cache = {}$/;"	v	class:ConqueSole
+color_changes	autoload/conque_term/conque.py	/^    color_changes = {}$/;"	v	class:Conque
+color_conceals	autoload/conque_term/conque_sole.py	/^    color_conceals = {}$/;"	v	class:ConqueSole
+color_history	autoload/conque_term/conque.py	/^    color_history = {}$/;"	v	class:Conque
+color_mode	autoload/conque_term/conque_sole.py	/^    color_mode = None$/;"	v	class:ConqueSole
+color_pruning	autoload/conque_term/conque.py	/^    color_pruning = True$/;"	v	class:Conque
+colors_name	colors/BusyBee.vim	/^let colors_name = "busybee"$/;"	v
+colors_name	colors/darkblue.vim	/^let colors_name = "darkblue"$/;"	v
+colors_name	colors/default.vim	/^let colors_name = "default"$/;"	v
+colors_name	colors/delek.vim	/^let colors_name = "delek"$/;"	v
+colors_name	colors/evening.vim	/^let colors_name = "evening"$/;"	v
+colors_name	colors/ir_black.vim	/^let colors_name = "ir_black"$/;"	v
+colors_name	colors/morning.vim	/^let colors_name = "morning"$/;"	v
+colors_name	colors/peachpuff.vim	/^let colors_name = "peachpuff"$/;"	v
+colors_name	colors/shine.vim	/^let colors_name = "shine"$/;"	v
+colors_name	colors/slate.vim	/^let colors_name = "slate"$/;"	v
+colors_name	colors/vanzan_color.vim	/^let colors_name = "vanzan_color"$/;"	v
+columns	autoload/conque_term/conque.py	/^    columns = 80 # same as $COLUMNS$/;"	v	class:Conque
+columns	autoload/conque_term/conque_sole_wrapper.py	/^    columns = 80$/;"	v	class:ConqueSoleWrapper
+conque_term#bell	autoload/conque_term.vim	/^function! conque_term#bell() " {{{$/;"	f
+conque_term#call_hooks	autoload/conque_term.vim	/^function! conque_term#call_hooks(event, t_obj) " {{{$/;"	f
+conque_term#close_all	autoload/conque_term.vim	/^function! conque_term#close_all() "{{{$/;"	f
+conque_term#create_terminal_object	autoload/conque_term.vim	/^function! conque_term#create_terminal_object(...) " {{{$/;"	f
+conque_term#dependency_check	autoload/conque_term.vim	/^function! conque_term#dependency_check() " {{{$/;"	f
+conque_term#exec_file	autoload/conque_term.vim	/^function! conque_term#exec_file() "{{{$/;"	f
+conque_term#fail	autoload/conque_term.vim	/^function! conque_term#fail(feature) " {{{$/;"	f
+conque_term#find_python_exe	autoload/conque_term.vim	/^function! conque_term#find_python_exe() " {{{$/;"	f
+conque_term#get_instance	autoload/conque_term.vim	/^function! conque_term#get_instance(...) " {{{$/;"	f
+conque_term#init	autoload/conque_term.vim	/^function! conque_term#init() " {{{$/;"	f
+conque_term#init_conceal_color	autoload/conque_term.vim	/^function! conque_term#init_conceal_color() " {{{$/;"	f
+conque_term#key_press	autoload/conque_term.vim	/^function! conque_term#key_press() "{{{$/;"	f
+conque_term#load_python	autoload/conque_term.vim	/^function! conque_term#load_python() " {{{$/;"	f
+conque_term#on_blur	autoload/conque_term.vim	/^function! conque_term#on_blur() " {{{$/;"	f
+conque_term#on_focus	autoload/conque_term.vim	/^function! conque_term#on_focus(...) " {{{$/;"	f
+conque_term#open	autoload/conque_term.vim	/^function! conque_term#open(...) "{{{$/;"	f
+conque_term#read_all	autoload/conque_term.vim	/^function! conque_term#read_all(insert_mode) "{{{$/;"	f
+conque_term#register_function	autoload/conque_term.vim	/^function! conque_term#register_function(event, function_name) " {{{$/;"	f
+conque_term#resume_session	autoload/conque_term.vim	/^function! conque_term#resume_session() " {{{$/;"	f
+conque_term#send_file	autoload/conque_term.vim	/^function! conque_term#send_file() "{{{$/;"	f
+conque_term#send_selected	autoload/conque_term.vim	/^function! conque_term#send_selected(type) "{{{$/;"	f
+conque_term#set_buffer_settings	autoload/conque_term.vim	/^function! conque_term#set_buffer_settings(command, vim_startup_commands) "{{{$/;"	f
+conque_term#set_mappings	autoload/conque_term.vim	/^function! conque_term#set_mappings(action) "{{{$/;"	f
+conque_term#subprocess	autoload/conque_term.vim	/^function! conque_term#subprocess(command) " {{{$/;"	f
+console_height	autoload/conque_term/conque_sole_communicator.py	/^        console_height = int(sys.argv[3])$/;"	v
+console_width	autoload/conque_term/conque_sole_communicator.py	/^        console_width = int(sys.argv[2])$/;"	v
+create	autoload/conque_term/conque_sole_shared_memory.py	/^    def create(self, access='write'):$/;"	m	class:ConqueSoleSharedMemory
+cs	plugin/surround.vim	/^  nmap cs  <Plug>Csurround$/;"	m
+csi_add_spaces	autoload/conque_term/conque.py	/^    def csi_add_spaces(self, csi):$/;"	m	class:Conque
+csi_clear_line	autoload/conque_term/conque.py	/^    def csi_clear_line(self, csi):$/;"	m	class:Conque
+csi_clear_screen	autoload/conque_term/conque.py	/^    def csi_clear_screen(self, csi):$/;"	m	class:Conque
+csi_cursor	autoload/conque_term/conque.py	/^    def csi_cursor(self, csi):$/;"	m	class:Conque
+csi_cursor_down	autoload/conque_term/conque.py	/^    def csi_cursor_down(self, csi):$/;"	m	class:Conque
+csi_cursor_left	autoload/conque_term/conque.py	/^    def csi_cursor_left(self, csi):$/;"	m	class:Conque
+csi_cursor_right	autoload/conque_term/conque.py	/^    def csi_cursor_right(self, csi):$/;"	m	class:Conque
+csi_cursor_to_column	autoload/conque_term/conque.py	/^    def csi_cursor_to_column(self, csi):$/;"	m	class:Conque
+csi_cursor_up	autoload/conque_term/conque.py	/^    def csi_cursor_up(self, csi):$/;"	m	class:Conque
+csi_delete_chars	autoload/conque_term/conque.py	/^    def csi_delete_chars(self, csi):$/;"	m	class:Conque
+csi_font	autoload/conque_term/conque.py	/^    def csi_font(self, csi):$/;"	m	class:Conque
+csi_reset	autoload/conque_term/conque.py	/^    def csi_reset(self, csi):$/;"	m	class:Conque
+csi_set	autoload/conque_term/conque.py	/^    def csi_set(self, csi):$/;"	m	class:Conque
+csi_set_coords	autoload/conque_term/conque.py	/^    def csi_set_coords(self, csi):$/;"	m	class:Conque
+csi_tab_clear	autoload/conque_term/conque.py	/^    def csi_tab_clear(self, csi):$/;"	m	class:Conque
+ctl_bel	autoload/conque_term/conque.py	/^    def ctl_bel(self):$/;"	m	class:Conque
+ctl_bs	autoload/conque_term/conque.py	/^    def ctl_bs(self):$/;"	m	class:Conque
+ctl_cr	autoload/conque_term/conque.py	/^    def ctl_cr(self):$/;"	m	class:Conque
+ctl_nl	autoload/conque_term/conque.py	/^    def ctl_nl(self):$/;"	m	class:Conque
+ctl_si	autoload/conque_term/conque.py	/^    def ctl_si(self):$/;"	m	class:Conque
+ctl_so	autoload/conque_term/conque.py	/^    def ctl_so(self):$/;"	m	class:Conque
+ctl_soh	autoload/conque_term/conque.py	/^    def ctl_soh(self):$/;"	m	class:Conque
+ctl_stx	autoload/conque_term/conque.py	/^    def ctl_stx(self):$/;"	m	class:Conque
+ctl_tab	autoload/conque_term/conque.py	/^    def ctl_tab(self):$/;"	m	class:Conque
+ctypes	autoload/conque_term/conque_sole_subprocess.py	/^import ctypes$/;"	i
+ctypes	autoload/conque_term/conque_sole_wrapper.py	/^import ctypes$/;"	i
+current_compiler	compiler/tex.vim	/^		let current_compiler = "latex"$/;"	v
+current_compiler	compiler/tex.vim	/^		let current_compiler = b:tex_flavor$/;"	v
+current_compiler	compiler/tex.vim	/^		let current_compiler = g:tex_flavor$/;"	v
+cursor_col	autoload/conque_term/conque_sole_subprocess.py	/^    cursor_col = 0$/;"	v	class:ConqueSoleSubprocess
+cursor_line	autoload/conque_term/conque_sole_subprocess.py	/^    cursor_line = 0$/;"	v	class:ConqueSoleSubprocess
+cursor_set	autoload/conque_term/conque.py	/^    cursor_set = False$/;"	v	class:Conque
+data	autoload/conque_term/conque_sole_subprocess.py	/^    data = []$/;"	v	class:ConqueSoleSubprocess
+default_attribute	autoload/conque_term/conque_sole_subprocess.py	/^    default_attribute = 7$/;"	v	class:ConqueSoleSubprocess
+did_cpp_syntax_inits	syntax/cpp.vim	/^    let did_cpp_syntax_inits = 1$/;"	v
+did_python_syn_inits	syntax/python3.0.vim	/^    let did_python_syn_inits = 1$/;"	v
+do_color	autoload/conque_term/conque_sole.py	/^    def do_color(self, start=0, end=0, attributes='', stats=None):$/;"	m	class:ConqueSole
+dosurround	plugin/surround.vim	/^function! s:dosurround(...) " {{{1$/;"	f
+ds	plugin/surround.vim	/^  nmap ds  <Plug>Dsurround$/;"	m
+enable_colors	autoload/conque_term/conque.py	/^    enable_colors = True$/;"	v	class:Conque
+encoding	autoload/conque_term/conque_sole.py	/^    encoding = None$/;"	v	class:ConqueSole
+encoding	autoload/conque_term/conque_sole_shared_memory.py	/^    encoding = 'utf-8'$/;"	v	class:ConqueSoleSharedMemory
+escChars	compiler/tex.vim	/^		let escChars = ''$/;"	v
+escChars	compiler/tex.vim	/^		let escChars = '{}\\'$/;"	v
+esc_next_line	autoload/conque_term/conque.py	/^    def esc_next_line(self):$/;"	m	class:Conque
+esc_scroll_down	autoload/conque_term/conque.py	/^    def esc_scroll_down(self):$/;"	m	class:Conque
+esc_scroll_up	autoload/conque_term/conque.py	/^    def esc_scroll_up(self):$/;"	m	class:Conque
+esc_set_tab	autoload/conque_term/conque.py	/^    def esc_set_tab(self):$/;"	m	class:Conque
+exec_highlight	autoload/conque_term/conque.py	/^    def exec_highlight(self, buffer_line, start, end, highlight):$/;"	m	class:Conque
+extractafter	plugin/surround.vim	/^function! s:extractafter(str)$/;"	f
+extractbefore	plugin/surround.vim	/^function! s:extractbefore(str)$/;"	f
+fast_mode	autoload/conque_term/conque_sole_communicator.py	/^        fast_mode = int(sys.argv[5])$/;"	v
+fast_mode	autoload/conque_term/conque_sole_subprocess.py	/^    fast_mode = 0$/;"	v	class:ConqueSoleSubprocess
+fcntl	autoload/conque_term/conque_subprocess.py	/^import fcntl$/;"	i
+fd	autoload/conque_term/conque_subprocess.py	/^    fd = None$/;"	v	class:ConqueSubprocess
+fixed_length	autoload/conque_term/conque_sole_shared_memory.py	/^    fixed_length = False$/;"	v	class:ConqueSoleSharedMemory
+fixindent	plugin/surround.vim	/^function! s:fixindent(str,spc)$/;"	f
+g:ConqueTerm_CWInsert	plugin/conque_term.vim	/^    let g:ConqueTerm_CWInsert = 0$/;"	v
+g:ConqueTerm_CloseOnEnd	plugin/conque_term.vim	/^    let g:ConqueTerm_CloseOnEnd = 0$/;"	v
+g:ConqueTerm_CodePage	plugin/conque_term.vim	/^    let g:ConqueTerm_CodePage = 0$/;"	v
+g:ConqueTerm_Color	plugin/conque_term.vim	/^    let g:ConqueTerm_Color = 1$/;"	v
+g:ConqueTerm_ColorMode	plugin/conque_term.vim	/^    let g:ConqueTerm_ColorMode = ''$/;"	v
+g:ConqueTerm_EscKey	plugin/conque_term.vim	/^    let g:ConqueTerm_EscKey = '<Esc>'$/;"	v
+g:ConqueTerm_ExecFileKey	plugin/conque_term.vim	/^    let g:ConqueTerm_ExecFileKey = '<F11>'$/;"	v
+g:ConqueTerm_FastMode	plugin/conque_term.vim	/^    let g:ConqueTerm_FastMode = 0$/;"	v
+g:ConqueTerm_Idx	autoload/conque_term.vim	/^let g:ConqueTerm_Idx = 0$/;"	v
+g:ConqueTerm_Idx	plugin/conque_term.vim	/^let g:ConqueTerm_Idx = 0$/;"	v
+g:ConqueTerm_InsertCharPre	plugin/conque_term.vim	/^    let g:ConqueTerm_InsertCharPre = 0$/;"	v
+g:ConqueTerm_InsertOnEnter	plugin/conque_term.vim	/^    let g:ConqueTerm_InsertOnEnter = 0$/;"	v
+g:ConqueTerm_Loaded	plugin/conque_term.vim	/^let g:ConqueTerm_Loaded = 1$/;"	v
+g:ConqueTerm_PromptRegex	plugin/conque_term.vim	/^    let g:ConqueTerm_PromptRegex = '^\\w\\+@[0-9A-Za-z_.-]\\+:[0-9A-Za-z_.\/\\~,:-]\\+\\$'$/;"	v
+g:ConqueTerm_PyExe	plugin/conque_term.vim	/^    let g:ConqueTerm_PyExe = ''$/;"	v
+g:ConqueTerm_PyVersion	plugin/conque_term.vim	/^    let g:ConqueTerm_PyVersion = 2$/;"	v
+g:ConqueTerm_ReadUnfocused	plugin/conque_term.vim	/^    let g:ConqueTerm_ReadUnfocused = 0$/;"	v
+g:ConqueTerm_SendFileKey	plugin/conque_term.vim	/^    let g:ConqueTerm_SendFileKey = '<F10>'$/;"	v
+g:ConqueTerm_SendFunctionKeys	plugin/conque_term.vim	/^    let g:ConqueTerm_SendFunctionKeys = 0$/;"	v
+g:ConqueTerm_SendVisKey	plugin/conque_term.vim	/^    let g:ConqueTerm_SendVisKey = '<F9>'$/;"	v
+g:ConqueTerm_SessionSupport	plugin/conque_term.vim	/^    let g:ConqueTerm_SessionSupport = 0$/;"	v
+g:ConqueTerm_StartMessages	plugin/conque_term.vim	/^    let g:ConqueTerm_StartMessages = 1$/;"	v
+g:ConqueTerm_Syntax	plugin/conque_term.vim	/^    let g:ConqueTerm_Syntax = 'conque_term'$/;"	v
+g:ConqueTerm_TERM	plugin/conque_term.vim	/^    let g:ConqueTerm_TERM =  'vt100'$/;"	v
+g:ConqueTerm_Terminals	autoload/conque_term.vim	/^let g:ConqueTerm_Terminals = {}$/;"	v
+g:ConqueTerm_TerminalsString	autoload/conque_term.vim	/^let g:ConqueTerm_TerminalsString = ''$/;"	v
+g:ConqueTerm_ToggleKey	plugin/conque_term.vim	/^    let g:ConqueTerm_ToggleKey = '<F8>'$/;"	v
+g:ConqueTerm_Version	plugin/conque_term.vim	/^let g:ConqueTerm_Version = 230$/;"	v
+g:Imap_Debug	plugin/imaps.vim	/^	let g:Imap_Debug = 0$/;"	v
+g:Imap_DeleteEmptyPlaceHolders	plugin/imaps.vim	/^	let g:Imap_DeleteEmptyPlaceHolders = 1$/;"	v
+g:Imap_StickyPlaceHolders	plugin/imaps.vim	/^	let g:Imap_StickyPlaceHolders = 1$/;"	v
+g:Tex_IgnoreLevel	compiler/tex.vim	/^	let g:Tex_IgnoreLevel = 7$/;"	v
+g:Tex_IgnoreUnmatched	compiler/tex.vim	/^	let g:Tex_IgnoreUnmatched = 1$/;"	v
+g:Tex_IgnoredWarnings	compiler/tex.vim	/^	let g:Tex_IgnoredWarnings =$/;"	v
+g:Tex_ShowallLines	compiler/tex.vim	/^	let g:Tex_ShowallLines = 0$/;"	v
+g:colors_name	colors/Dim.vim	/^let g:colors_name = "Dim"$/;"	v
+g:colors_name	colors/black_angus.vim	/^let g:colors_name = "black_angus"$/;"	v
+g:colors_name	colors/blue.vim	/^let g:colors_name = "blue"$/;"	v
+g:colors_name	colors/desert.vim	/^let g:colors_name="desert"$/;"	v
+g:colors_name	colors/elflord.vim	/^let g:colors_name = "elflord"$/;"	v
+g:colors_name	colors/koehler.vim	/^let g:colors_name = "koehler"$/;"	v
+g:colors_name	colors/murphy.vim	/^let g:colors_name = "murphy"$/;"	v
+g:colors_name	colors/pablo.vim	/^let g:colors_name = "pablo"$/;"	v
+g:colors_name	colors/ron.vim	/^let g:colors_name = "ron"$/;"	v
+g:colors_name	colors/torte.vim	/^let g:colors_name = "torte"$/;"	v
+g:colors_name	colors/zellner.vim	/^let g:colors_name = "zellner"$/;"	v
+g:git_author_highlight	plugin/git.vim	/^    let g:git_author_highlight = { }$/;"	v
+g:git_bin	plugin/git.vim	/^    let g:git_bin = 'git'$/;"	v
+g:git_bufhidden	plugin/git.vim	/^    let g:git_bufhidden = ''$/;"	v
+g:git_command_edit	plugin/git.vim	/^    let g:git_command_edit = 'new'$/;"	v
+g:git_highlight_blame	plugin/git.vim	/^    let g:git_highlight_blame = 0$/;"	v
+g:listSep	plugin/libList.vim	/^let g:listSep = ","$/;"	v
+g:loaded_surround	plugin/surround.vim	/^let g:loaded_surround = 1$/;"	v
+g:tex_indent_items	indent/tex.vim	/^  let g:tex_indent_items = 1$/;"	v
+get_buffer_info	autoload/conque_term/conque_sole_subprocess.py	/^    def get_buffer_info(self):$/;"	m	class:ConqueSoleSubprocess
+get_buffer_line	autoload/conque_term/conque.py	/^    def get_buffer_line(self, line):$/;"	m	class:Conque
+get_buffer_line	autoload/conque_term/conque_screen.py	/^    def get_buffer_line(self, line):$/;"	m	class:ConqueScreen
+get_buffer_line	autoload/conque_term/conque_sole.py	/^    def get_buffer_line(self, line):$/;"	m	class:ConqueSole
+get_new_output	autoload/conque_term/conque_sole.py	/^    def get_new_output(self, lines, update_top, stats):$/;"	m	class:ConqueSole
+get_real_idx	autoload/conque_term/conque_screen.py	/^    def get_real_idx(self, line):$/;"	m	class:ConqueScreen
+get_screen_text	autoload/conque_term/conque_sole_subprocess.py	/^    def get_screen_text(self):$/;"	m	class:ConqueSoleSubprocess
+get_stats	autoload/conque_term/conque_sole_wrapper.py	/^    def get_stats(self):$/;"	m	class:ConqueSoleWrapper
+get_top	autoload/conque_term/conque_screen.py	/^    def get_top(self):$/;"	m	class:ConqueScreen
+getchar	plugin/surround.vim	/^function! s:getchar()$/;"	f
+handle	autoload/conque_term/conque_sole_subprocess.py	/^    handle = None$/;"	v	class:ConqueSoleSubprocess
+handle	autoload/conque_term/conque_sole_wrapper.py	/^    handle = None$/;"	v	class:ConqueSoleWrapper
+hash_screen_alignment_test	autoload/conque_term/conque.py	/^    def hash_screen_alignment_test(self):$/;"	m	class:Conque
+highlight_groups	autoload/conque_term/conque.py	/^    highlight_groups = {}$/;"	v	class:Conque
+idle	autoload/conque_term/conque.py	/^    def idle(self):$/;"	m	class:Conque
+idle	autoload/conque_term/conque_sole.py	/^    def idle(self):$/;"	m	class:ConqueSole
+idle	autoload/conque_term/conque_sole_wrapper.py	/^    def idle(self):$/;"	m	class:ConqueSoleWrapper
+idle_sleep_time	autoload/conque_term/conque_sole_communicator.py	/^        idle_sleep_time = 0.10$/;"	v
+init_shared_memory	autoload/conque_term/conque_sole_subprocess.py	/^    def init_shared_memory(self, mem_key):$/;"	m	class:ConqueSoleSubprocess
+init_shared_memory	autoload/conque_term/conque_sole_wrapper.py	/^    def init_shared_memory(self, mem_key):$/;"	m	class:ConqueSoleWrapper
+init_tabstops	autoload/conque_term/conque.py	/^    def init_tabstops(self):$/;"	m	class:Conque
+input_buffer	autoload/conque_term/conque.py	/^    input_buffer = []$/;"	v	class:Conque
+inputreplacement	plugin/surround.vim	/^function! s:inputreplacement()$/;"	f
+inputtarget	plugin/surround.vim	/^function! s:inputtarget()$/;"	f
+insert	autoload/conque_term/conque_screen.py	/^    def insert(self, line, value):$/;"	m	class:ConqueScreen
+insert	plugin/surround.vim	/^function! s:insert(...) " {{{1$/;"	f
+insert_enter	autoload/conque_term/conque.py	/^    def insert_enter(self):$/;"	m	class:Conque
+is_alive	autoload/conque_term/conque_sole_subprocess.py	/^    def is_alive(self):$/;"	m	class:ConqueSoleSubprocess
+is_alive	autoload/conque_term/conque_sole_subprocess.py	/^    is_alive = True$/;"	v	class:ConqueSoleSubprocess
+is_alive	autoload/conque_term/conque_sole_wrapper.py	/^    def is_alive(self):$/;"	m	class:ConqueSoleWrapper
+is_alive	autoload/conque_term/conque_subprocess.py	/^    def is_alive(self):$/;"	m	class:ConqueSubprocess
+is_idle	autoload/conque_term/conque_sole_communicator.py	/^                        is_idle = False$/;"	v
+is_idle	autoload/conque_term/conque_sole_communicator.py	/^                        is_idle = True$/;"	v
+is_idle	autoload/conque_term/conque_sole_communicator.py	/^                is_idle = True$/;"	v
+is_idle	autoload/conque_term/conque_sole_communicator.py	/^        is_idle = False$/;"	v
+l	autoload/conque_term/conque.py	/^    l = 1 # current cursor line$/;"	v	class:Conque
+line_offset	autoload/conque_term/conque_sole_subprocess.py	/^    line_offset = 0$/;"	v	class:ConqueSoleSubprocess
+lines	autoload/conque_term/conque.py	/^    lines = 24 # same as $LINES$/;"	v	class:Conque
+lines	autoload/conque_term/conque_sole_wrapper.py	/^    lines = 24$/;"	v	class:ConqueSoleWrapper
+loaded_libList	plugin/libList.vim	/^let loaded_libList=1$/;"	v
+loaded_search_complete	plugin/SearchComplete.vim	/^let loaded_search_complete = 1$/;"	v
+loaded_taglist	plugin/taglist.vim	/^            let loaded_taglist = 'no'$/;"	v
+loaded_taglist	plugin/taglist.vim	/^        let loaded_taglist = 'no'$/;"	v
+loaded_taglist	plugin/taglist.vim	/^    let loaded_taglist = 'fast_load_done'$/;"	v
+loaded_taglist	plugin/taglist.vim	/^let loaded_taglist = 'available'$/;"	v
+loops	autoload/conque_term/conque_sole_communicator.py	/^        loops = 0$/;"	v
+math	autoload/conque_term/conque.py	/^import math$/;"	i
+max_loops	autoload/conque_term/conque_sole_communicator.py	/^        max_loops = 0$/;"	v
+mem_key	autoload/conque_term/conque_sole_communicator.py	/^        mem_key = sys.argv[1]$/;"	v
+mem_key	autoload/conque_term/conque_sole_shared_memory.py	/^    mem_key = None$/;"	v	class:ConqueSoleSharedMemory
+mem_redraw_ct	autoload/conque_term/conque_sole_subprocess.py	/^    mem_redraw_ct = 0$/;"	v	class:ConqueSoleSubprocess
+mem_size	autoload/conque_term/conque_sole_shared_memory.py	/^    mem_size = None$/;"	v	class:ConqueSoleSharedMemory
+mem_type	autoload/conque_term/conque_sole_shared_memory.py	/^    mem_type = None$/;"	v	class:ConqueSoleSharedMemory
+mmap	autoload/conque_term/conque_sole_shared_memory.py	/^import mmap$/;"	i
+offset	autoload/conque_term/conque_sole.py	/^    offset = 0$/;"	v	class:ConqueSole
+open	autoload/conque_term/conque.py	/^    def open(self):$/;"	m	class:Conque
+open	autoload/conque_term/conque_sole.py	/^    def open(self):$/;"	m	class:ConqueSole
+open	autoload/conque_term/conque_sole_subprocess.py	/^    def open(self, cmd, mem_key, options={}):$/;"	m	class:ConqueSoleSubprocess
+open	autoload/conque_term/conque_sole_wrapper.py	/^    def open(self, cmd, lines, columns, python_exe='python.exe', communicator_py='conque_sole_communicator.py', options={}):$/;"	m	class:ConqueSoleWrapper
+open	autoload/conque_term/conque_subprocess.py	/^    def open(self, command, env={}):$/;"	m	class:ConqueSubprocess
+opfunc	plugin/surround.vim	/^function! s:opfunc(type,...) " {{{1$/;"	f
+opfunc2	plugin/surround.vim	/^function! s:opfunc2(arg)$/;"	f
+options	autoload/conque_term/conque_sole_communicator.py	/^        options = {'LINES': console_height, 'COLUMNS': console_width, 'CODE_PAGE': code_page, 'FAST_MODE': fast_mode}$/;"	v
+options	compiler/tex.vim	/^		let options = ''$/;"	v
+options	compiler/tex.vim	/^		let options = '--src-specials'$/;"	v
+os	autoload/conque_term/conque_sole_subprocess.py	/^import os$/;"	i
+os	autoload/conque_term/conque_subprocess.py	/^import os$/;"	i
+output_blocks	autoload/conque_term/conque_sole_subprocess.py	/^    output_blocks = 1$/;"	v	class:ConqueSoleSubprocess
+parse_csi	autoload/conque_term/conque.py	/^    def parse_csi(self, s):$/;"	m	class:Conque
+pickle	autoload/conque_term/conque_sole_shared_memory.py	/^    import cPickle as pickle$/;"	i
+pickle	autoload/conque_term/conque_sole_shared_memory.py	/^    import pickle$/;"	i
+pid	autoload/conque_term/conque_sole_subprocess.py	/^    pid = None$/;"	v	class:ConqueSoleSubprocess
+pid	autoload/conque_term/conque_sole_wrapper.py	/^    pid = None$/;"	v	class:ConqueSoleWrapper
+pid	autoload/conque_term/conque_subprocess.py	/^    pid = 0$/;"	v	class:ConqueSubprocess
+plain_text	autoload/conque_term/conque.py	/^    def plain_text(self, input):$/;"	m	class:Conque
+plain_text	autoload/conque_term/conque_sole.py	/^    def plain_text(self, line_nr, text, attributes, stats):$/;"	m	class:ConqueSole
+proc	autoload/conque_term/conque.py	/^    proc = None$/;"	v	class:Conque
+proc	autoload/conque_term/conque_sole_communicator.py	/^        proc = ConqueSoleSubprocess()$/;"	v
+proc	autoload/conque_term/conque_sole_wrapper.py	/^    proc = None$/;"	v	class:ConqueSoleWrapper
+process	plugin/surround.vim	/^function! s:process(string)$/;"	f
+prune_colors	autoload/conque_term/conque.py	/^    def prune_colors(self):$/;"	m	class:Conque
+pty	autoload/conque_term/conque_subprocess.py	/^import pty$/;"	i
+python_highlight_builtin_funcs	syntax/python3.0.vim	/^      let python_highlight_builtin_funcs = 1$/;"	v
+python_highlight_builtin_objs	syntax/python3.0.vim	/^      let python_highlight_builtin_objs = 1$/;"	v
+python_highlight_doctests	syntax/python3.0.vim	/^    let python_highlight_doctests = 1$/;"	v
+python_highlight_exceptions	syntax/python3.0.vim	/^    let python_highlight_exceptions = 1$/;"	v
+python_highlight_indent_errors	syntax/python3.0.vim	/^    let python_highlight_indent_errors = 1$/;"	v
+python_highlight_space_errors	syntax/python3.0.vim	/^    let python_highlight_space_errors = 1$/;"	v
+python_highlight_string_format	syntax/python3.0.vim	/^    let python_highlight_string_format = 1$/;"	v
+python_highlight_string_formatting	syntax/python3.0.vim	/^    let python_highlight_string_formatting = 1$/;"	v
+python_highlight_string_templates	syntax/python3.0.vim	/^    let python_highlight_string_templates = 1$/;"	v
+re	autoload/conque_term/conque.py	/^import re$/;"	i
+re	autoload/conque_term/conque_globals.py	/^import re$/;"	i
+re	autoload/conque_term/conque_sole_subprocess.py	/^import re$/;"	i
+read	autoload/conque_term/conque.py	/^    def read(self, timeout=1, set_cursor=True, return_output=False, update_buffer=True):$/;"	m	class:Conque
+read	autoload/conque_term/conque_sole.py	/^    def read(self, timeout=1, set_cursor=True, return_output=False, update_buffer=True):$/;"	m	class:ConqueSole
+read	autoload/conque_term/conque_sole_shared_memory.py	/^    def read(self, chars=1, start=0):$/;"	m	class:ConqueSoleSharedMemory
+read	autoload/conque_term/conque_sole_subprocess.py	/^    def read(self):$/;"	m	class:ConqueSoleSubprocess
+read	autoload/conque_term/conque_sole_wrapper.py	/^    def read(self, start_line, num_lines, timeout=0):$/;"	m	class:ConqueSoleWrapper
+read	autoload/conque_term/conque_subprocess.py	/^    def read(self, timeout=1):$/;"	m	class:ConqueSubprocess
+read_count	autoload/conque_term/conque.py	/^    read_count = 0$/;"	v	class:Conque
+redraw	plugin/surround.vim	/^function! s:redraw()$/;"	f
+reindent	plugin/surround.vim	/^function! s:reindent() " {{{1$/;"	f
+res	autoload/conque_term/conque_sole_communicator.py	/^        res = proc.open(cmd_line, mem_key, options)$/;"	v
+reset_console	autoload/conque_term/conque_sole_subprocess.py	/^    def reset_console(self, buf_info, add_block=True):$/;"	m	class:ConqueSoleSubprocess
+reset_size	autoload/conque_term/conque_screen.py	/^    def reset_size(self, line):$/;"	m	class:ConqueScreen
+resume	autoload/conque_term/conque.py	/^    def resume(self):$/;"	m	class:Conque
+resume	autoload/conque_term/conque_sole.py	/^    def resume(self):$/;"	m	class:ConqueSole
+resume	autoload/conque_term/conque_sole_wrapper.py	/^    def resume(self):$/;"	m	class:ConqueSoleWrapper
+s:Mark	plugin/imaps.vim	/^let s:Mark = "(0,0)"$/;"	v
+s:RemoveLastHistoryItem	plugin/imaps.vim	/^let s:RemoveLastHistoryItem = ':call histdel("\/", -1)|let @\/=g:Tex_LastSearchPattern'$/;"	v
+s:Tlist_Skip_Refresh	plugin/taglist.vim	/^let s:Tlist_Skip_Refresh = 0$/;"	v
+s:cpo_save	plugin/taglist.vim	/^let s:cpo_save = &cpo$/;"	v
+s:hooks	autoload/conque_term.vim	/^let s:hooks = { 'after_startup': [], 'buffer_enter': [], 'buffer_leave': [], 'after_keymap': [] }$/;"	v
+s:initBlanks	plugin/imaps.vim	/^let s:initBlanks = ''$/;"	v
+s:initialized	autoload/conque_term.vim	/^let s:initialized = 0$/;"	v
+s:menu_char_prefix	plugin/taglist.vim	/^let s:menu_char_prefix =$/;"	v
+s:save_cpo	plugin/filebrowser.vim	/^let s:save_cpo = &cpo$/;"	v
+s:save_cpo	plugin/imaps.vim	/^let s:save_cpo = &cpo$/;"	v
+s:save_updatetime	autoload/conque_term.vim	/^let s:save_updatetime = &updatetime$/;"	v
+s:saved_terminals	autoload/conque_term.vim	/^        let s:saved_terminals = {}$/;"	v
+s:scriptdir	autoload/conque_term.vim	/^let s:scriptdir = expand("<sfile>:h") . '\/'$/;"	v
+s:scriptdirpy	autoload/conque_term.vim	/^let s:scriptdirpy = expand("<sfile>:h") . '\/conque_term\/'$/;"	v
+s:term_obj	autoload/conque_term.vim	/^let s:term_obj = {'idx': 1, 'var': '', 'is_buffer': 1, 'active': 1, 'buffer_name': '', 'command': ''}$/;"	v
+s:tlist_app_name	plugin/taglist.vim	/^let s:tlist_app_name = "none"$/;"	v
+s:tlist_brief_help	plugin/taglist.vim	/^let s:tlist_brief_help = 1$/;"	v
+s:tlist_cur_file_idx	plugin/taglist.vim	/^let s:tlist_cur_file_idx = -1$/;"	v
+s:tlist_debug	plugin/taglist.vim	/^let s:tlist_debug = 0$/;"	v
+s:tlist_debug_file	plugin/taglist.vim	/^let s:tlist_debug_file = ''$/;"	v
+s:tlist_def_asm_settings	plugin/taglist.vim	/^let s:tlist_def_asm_settings = 'asm;d:define;l:label;m:macro;t:type'$/;"	v
+s:tlist_def_aspperl_settings	plugin/taglist.vim	/^let s:tlist_def_aspperl_settings = 'asp;f:function;s:sub;v:variable'$/;"	v
+s:tlist_def_aspvbs_settings	plugin/taglist.vim	/^let s:tlist_def_aspvbs_settings = 'asp;f:function;s:sub;v:variable'$/;"	v
+s:tlist_def_awk_settings	plugin/taglist.vim	/^let s:tlist_def_awk_settings = 'awk;f:function'$/;"	v
+s:tlist_def_beta_settings	plugin/taglist.vim	/^let s:tlist_def_beta_settings = 'beta;f:fragment;s:slot;v:pattern'$/;"	v
+s:tlist_def_c_settings	plugin/taglist.vim	/^let s:tlist_def_c_settings = 'c;d:macro;g:enum;s:struct;u:union;t:typedef;' .$/;"	v
+s:tlist_def_cobol_settings	plugin/taglist.vim	/^let s:tlist_def_cobol_settings = 'cobol;d:data;f:file;g:group;p:paragraph;' .$/;"	v
+s:tlist_def_cpp_settings	plugin/taglist.vim	/^let s:tlist_def_cpp_settings = 'c++;n:namespace;v:variable;d:macro;t:typedef;' .$/;"	v
+s:tlist_def_cs_settings	plugin/taglist.vim	/^let s:tlist_def_cs_settings = 'c#;d:macro;t:typedef;n:namespace;c:class;' .$/;"	v
+s:tlist_def_csh_settings	plugin/taglist.vim	/^let s:tlist_def_csh_settings = 'sh;f:function'$/;"	v
+s:tlist_def_eiffel_settings	plugin/taglist.vim	/^let s:tlist_def_eiffel_settings = 'eiffel;c:class;f:feature'$/;"	v
+s:tlist_def_erlang_settings	plugin/taglist.vim	/^let s:tlist_def_erlang_settings = 'erlang;d:macro;r:record;m:module;f:function'$/;"	v
+s:tlist_def_expect_settings	plugin/taglist.vim	/^let s:tlist_def_expect_settings = 'tcl;c:class;f:method;p:procedure'$/;"	v
+s:tlist_def_fortran_settings	plugin/taglist.vim	/^let s:tlist_def_fortran_settings = 'fortran;p:program;b:block data;' .$/;"	v
+s:tlist_def_html_settings	plugin/taglist.vim	/^let s:tlist_def_html_settings = 'html;a:anchor;f:javascript function'$/;"	v
+s:tlist_def_java_settings	plugin/taglist.vim	/^let s:tlist_def_java_settings = 'java;p:package;c:class;i:interface;' .$/;"	v
+s:tlist_def_javascript_settings	plugin/taglist.vim	/^let s:tlist_def_javascript_settings = 'javascript;f:function'$/;"	v
+s:tlist_def_lisp_settings	plugin/taglist.vim	/^let s:tlist_def_lisp_settings = 'lisp;f:function'$/;"	v
+s:tlist_def_lua_settings	plugin/taglist.vim	/^let s:tlist_def_lua_settings = 'lua;f:function'$/;"	v
+s:tlist_def_make_settings	plugin/taglist.vim	/^let s:tlist_def_make_settings = 'make;m:macro'$/;"	v
+s:tlist_def_pascal_settings	plugin/taglist.vim	/^let s:tlist_def_pascal_settings = 'pascal;f:function;p:procedure'$/;"	v
+s:tlist_def_perl_settings	plugin/taglist.vim	/^let s:tlist_def_perl_settings = 'perl;c:constant;l:label;p:package;s:subroutine'$/;"	v
+s:tlist_def_php_settings	plugin/taglist.vim	/^let s:tlist_def_php_settings = 'php;c:class;d:constant;v:variable;f:function'$/;"	v
+s:tlist_def_python_settings	plugin/taglist.vim	/^let s:tlist_def_python_settings = 'python;c:class;m:member;f:function'$/;"	v
+s:tlist_def_rexx_settings	plugin/taglist.vim	/^let s:tlist_def_rexx_settings = 'rexx;s:subroutine'$/;"	v
+s:tlist_def_ruby_settings	plugin/taglist.vim	/^let s:tlist_def_ruby_settings = 'ruby;c:class;f:method;F:function;' .$/;"	v
+s:tlist_def_scheme_settings	plugin/taglist.vim	/^let s:tlist_def_scheme_settings = 'scheme;s:set;f:function'$/;"	v
+s:tlist_def_sh_settings	plugin/taglist.vim	/^let s:tlist_def_sh_settings = 'sh;f:function'$/;"	v
+s:tlist_def_slang_settings	plugin/taglist.vim	/^let s:tlist_def_slang_settings = 'slang;n:namespace;f:function'$/;"	v
+s:tlist_def_sml_settings	plugin/taglist.vim	/^let s:tlist_def_sml_settings = 'sml;e:exception;c:functor;s:signature;' .$/;"	v
+s:tlist_def_sql_settings	plugin/taglist.vim	/^let s:tlist_def_sql_settings = 'sql;c:cursor;F:field;P:package;r:record;' .$/;"	v
+s:tlist_def_tcl_settings	plugin/taglist.vim	/^let s:tlist_def_tcl_settings = 'tcl;c:class;f:method;m:method;p:procedure'$/;"	v
+s:tlist_def_vera_settings	plugin/taglist.vim	/^let s:tlist_def_vera_settings = 'vera;c:class;d:macro;e:enumerator;' .$/;"	v
+s:tlist_def_verilog_settings	plugin/taglist.vim	/^let s:tlist_def_verilog_settings = 'verilog;m:module;c:constant;P:parameter;' .$/;"	v
+s:tlist_def_vim_settings	plugin/taglist.vim	/^let s:tlist_def_vim_settings = 'vim;a:autocmds;v:variable;f:function'$/;"	v
+s:tlist_def_yacc_settings	plugin/taglist.vim	/^let s:tlist_def_yacc_settings = 'yacc;l:label'$/;"	v
+s:tlist_def_zsh_settings	plugin/taglist.vim	/^let s:tlist_def_zsh_settings = 'sh;f:function'$/;"	v
+s:tlist_file_count	plugin/taglist.vim	/^let s:tlist_file_count = 0$/;"	v
+s:tlist_file_lnum_idx_cache	plugin/taglist.vim	/^let s:tlist_file_lnum_idx_cache = -1$/;"	v
+s:tlist_file_name_idx_cache	plugin/taglist.vim	/^let s:tlist_file_name_idx_cache = -1$/;"	v
+s:tlist_file_names	plugin/taglist.vim	/^let s:tlist_file_names=''$/;"	v
+s:tlist_ftype_count	plugin/taglist.vim	/^let s:tlist_ftype_count = 0$/;"	v
+s:tlist_menu_empty	plugin/taglist.vim	/^let s:tlist_menu_empty = 1$/;"	v
+s:tlist_msg	plugin/taglist.vim	/^    let s:tlist_msg = ''$/;"	v
+s:tlist_removed_flist	plugin/taglist.vim	/^let s:tlist_removed_flist = ""$/;"	v
+s:tlist_sid	plugin/taglist.vim	/^    let s:tlist_sid = substitute(maparg('<SID>xx'), '<SNR>\\(\\d\\+_\\)xx$',$/;"	v
+s:tlist_win_maximized	plugin/taglist.vim	/^let s:tlist_win_maximized = 0$/;"	v
+s:tlist_winsize_chgd	plugin/taglist.vim	/^let s:tlist_winsize_chgd = -1$/;"	v
+s:windows_vk	autoload/conque_term.vim	/^let s:windows_vk = {$/;"	v
+screen	autoload/conque_term/conque.py	/^    screen = None$/;"	v	class:Conque
+screen_encoding	autoload/conque_term/conque_screen.py	/^    screen_encoding = 'utf-8'$/;"	v	class:ConqueScreen
+screen_height	autoload/conque_term/conque_screen.py	/^    screen_height = 80$/;"	v	class:ConqueScreen
+screen_redraw_ct	autoload/conque_term/conque_sole.py	/^    screen_redraw_ct = 1$/;"	v	class:ConqueSole
+screen_redraw_ct	autoload/conque_term/conque_sole_subprocess.py	/^    screen_redraw_ct = 0$/;"	v	class:ConqueSoleSubprocess
+screen_top	autoload/conque_term/conque_screen.py	/^    screen_top = 1$/;"	v	class:ConqueScreen
+screen_width	autoload/conque_term/conque_screen.py	/^    screen_width = 80$/;"	v	class:ConqueScreen
+select	autoload/conque_term/conque_subprocess.py	/^import select$/;"	i
+serialize	autoload/conque_term/conque_sole_shared_memory.py	/^    serialize = False$/;"	v	class:ConqueSoleSharedMemory
+set_cursor	autoload/conque_term/conque.py	/^    def set_cursor(self, line, col):$/;"	m	class:Conque
+set_cursor	autoload/conque_term/conque_screen.py	/^    def set_cursor(self, line, column):$/;"	m	class:ConqueScreen
+set_cursor	autoload/conque_term/conque_sole.py	/^    def set_cursor(self, line, column):$/;"	m	class:ConqueSole
+set_screen_width	autoload/conque_term/conque_screen.py	/^    def set_screen_width(self, width):$/;"	m	class:ConqueScreen
+set_window_size	autoload/conque_term/conque_sole_subprocess.py	/^    def set_window_size(self, width, height):$/;"	m	class:ConqueSoleSubprocess
+shlex	autoload/conque_term/conque_subprocess.py	/^import shlex$/;"	i
+shm	autoload/conque_term/conque_sole_shared_memory.py	/^    shm = None$/;"	v	class:ConqueSoleSharedMemory
+shm_attributes	autoload/conque_term/conque_sole_subprocess.py	/^    shm_attributes = None$/;"	v	class:ConqueSoleSubprocess
+shm_attributes	autoload/conque_term/conque_sole_wrapper.py	/^    shm_attributes = None$/;"	v	class:ConqueSoleWrapper
+shm_command	autoload/conque_term/conque_sole_communicator.py	/^        shm_command = ConqueSoleSharedMemory(CONQUE_SOLE_COMMANDS_SIZE, 'command', mem_key, serialize=True)$/;"	v
+shm_command	autoload/conque_term/conque_sole_subprocess.py	/^    shm_command = None$/;"	v	class:ConqueSoleSubprocess
+shm_command	autoload/conque_term/conque_sole_wrapper.py	/^    shm_command = None$/;"	v	class:ConqueSoleWrapper
+shm_input	autoload/conque_term/conque_sole_subprocess.py	/^    shm_input = None$/;"	v	class:ConqueSoleSubprocess
+shm_input	autoload/conque_term/conque_sole_wrapper.py	/^    shm_input = None$/;"	v	class:ConqueSoleWrapper
+shm_key	autoload/conque_term/conque_sole_wrapper.py	/^    shm_key = ''$/;"	v	class:ConqueSoleWrapper
+shm_output	autoload/conque_term/conque_sole_subprocess.py	/^    shm_output = None$/;"	v	class:ConqueSoleSubprocess
+shm_output	autoload/conque_term/conque_sole_wrapper.py	/^    shm_output = None$/;"	v	class:ConqueSoleWrapper
+shm_rescroll	autoload/conque_term/conque_sole_subprocess.py	/^    shm_rescroll = None$/;"	v	class:ConqueSoleSubprocess
+shm_rescroll	autoload/conque_term/conque_sole_wrapper.py	/^    shm_rescroll = None$/;"	v	class:ConqueSoleWrapper
+shm_resize	autoload/conque_term/conque_sole_subprocess.py	/^    shm_resize = None$/;"	v	class:ConqueSoleSubprocess
+shm_resize	autoload/conque_term/conque_sole_wrapper.py	/^    shm_resize = None$/;"	v	class:ConqueSoleWrapper
+shm_stats	autoload/conque_term/conque_sole_subprocess.py	/^    shm_stats = None$/;"	v	class:ConqueSoleSubprocess
+shm_stats	autoload/conque_term/conque_sole_wrapper.py	/^    shm_stats = None$/;"	v	class:ConqueSoleWrapper
+signal	autoload/conque_term/conque_subprocess.py	/^    def signal(self, signum):$/;"	m	class:ConqueSubprocess
+signal	autoload/conque_term/conque_subprocess.py	/^import signal$/;"	i
+sleep_time	autoload/conque_term/conque_sole_communicator.py	/^        sleep_time = 0.01$/;"	v
+stdin	autoload/conque_term/conque_sole_subprocess.py	/^    stdin = None$/;"	v	class:ConqueSoleSubprocess
+stdout	autoload/conque_term/conque_sole_subprocess.py	/^    stdout = None$/;"	v	class:ConqueSoleSubprocess
+struct	autoload/conque_term/conque_subprocess.py	/^import struct$/;"	i
+sys	autoload/conque_term/conque_globals.py	/^import sys$/;"	i
+sys	autoload/conque_term/conque_sole_communicator.py	/^import sys$/;"	i
+sys	autoload/conque_term/conque_sole_shared_memory.py	/^import sys$/;"	i
+tabstops	autoload/conque_term/conque.py	/^    tabstops = []$/;"	v	class:Conque
+term_obj.close	autoload/conque_term.vim	/^function! s:term_obj.close() dict " {{{$/;"	f
+term_obj.focus	autoload/conque_term.vim	/^function! s:term_obj.focus() dict " {{{$/;"	f
+term_obj.read	autoload/conque_term.vim	/^function! s:term_obj.read(...) dict " {{{$/;"	f
+term_obj.set_callback	autoload/conque_term.vim	/^function! s:term_obj.set_callback(callback_func) dict " {{{$/;"	f
+term_obj.write	autoload/conque_term.vim	/^function! s:term_obj.write(...) dict " {{{$/;"	f
+term_obj.writeln	autoload/conque_term.vim	/^function! s:term_obj.writeln(...) dict " {{{$/;"	f
+termios	autoload/conque_term/conque_subprocess.py	/^import termios$/;"	i
+time	autoload/conque_term/conque_sole_communicator.py	/^import time$/;"	i
+time	autoload/conque_term/conque_sole_subprocess.py	/^import time$/;"	i
+time	autoload/conque_term/conque_sole_wrapper.py	/^import time$/;"	i
+to_str	autoload/conque_term/conque_win32_util.py	/^    def to_str(self):$/;"	m	class:CHAR_INFO
+to_str	autoload/conque_term/conque_win32_util.py	/^    def to_str(self):$/;"	m	class:CHAR_UNION
+to_str	autoload/conque_term/conque_win32_util.py	/^    def to_str(self):$/;"	m	class:CONSOLE_SCREEN_BUFFER_INFO
+to_str	autoload/conque_term/conque_win32_util.py	/^    def to_str(self):$/;"	m	class:COORD
+to_str	autoload/conque_term/conque_win32_util.py	/^    def to_str(self):$/;"	m	class:FOCUS_EVENT_RECORD
+to_str	autoload/conque_term/conque_win32_util.py	/^    def to_str(self):$/;"	m	class:INPUT_RECORD
+to_str	autoload/conque_term/conque_win32_util.py	/^    def to_str(self):$/;"	m	class:INPUT_UNION
+to_str	autoload/conque_term/conque_win32_util.py	/^    def to_str(self):$/;"	m	class:KEY_EVENT_RECORD
+to_str	autoload/conque_term/conque_win32_util.py	/^    def to_str(self):$/;"	m	class:MEMORY_BASIC_INFORMATION
+to_str	autoload/conque_term/conque_win32_util.py	/^    def to_str(self):$/;"	m	class:MENU_EVENT_RECORD
+to_str	autoload/conque_term/conque_win32_util.py	/^    def to_str(self):$/;"	m	class:MOUSE_EVENT_RECORD
+to_str	autoload/conque_term/conque_win32_util.py	/^    def to_str(self):$/;"	m	class:PROCESS_INFORMATION
+to_str	autoload/conque_term/conque_win32_util.py	/^    def to_str(self):$/;"	m	class:SECURITY_ATTRIBUTES
+to_str	autoload/conque_term/conque_win32_util.py	/^    def to_str(self):$/;"	m	class:SMALL_RECT
+to_str	autoload/conque_term/conque_win32_util.py	/^    def to_str(self):$/;"	m	class:STARTUPINFO
+to_str	autoload/conque_term/conque_win32_util.py	/^    def to_str(self):$/;"	m	class:WINDOW_BUFFER_SIZE_RECORD
+top	autoload/conque_term/conque.py	/^    top = 1 # relative to top of screen$/;"	v	class:Conque
+top	autoload/conque_term/conque_sole_subprocess.py	/^    top = 0$/;"	v	class:ConqueSoleSubprocess
+translate_color	autoload/conque_term/conque_sole.py	/^    def translate_color(self, attr):$/;"	m	class:ConqueSole
+tty	autoload/conque_term/conque_subprocess.py	/^import tty$/;"	i
+u	autoload/conque_term/conque_globals.py	/^def u(str_val, str_encoding='utf-8', errors='strict'):$/;"	f
+uchr	autoload/conque_term/conque_globals.py	/^def uchr(str):$/;"	f
+unwrap_tables	autoload/conque_term/conque.py	/^    unwrap_tables = True$/;"	v	class:Conque
+update_window_size	autoload/conque_term/conque.py	/^    def update_window_size(self, force=False):$/;"	m	class:Conque
+update_window_size	autoload/conque_term/conque_sole.py	/^    def update_window_size(self):$/;"	m	class:ConqueSole
+vim	autoload/conque_term/conque.py	/^import vim$/;"	i
+vim	autoload/conque_term/conque_globals.py	/^    import vim$/;"	i
+vim	autoload/conque_term/conque_screen.py	/^import vim$/;"	i
+vim	autoload/conque_term/conque_sole.py	/^import vim$/;"	i
+window_bottom	autoload/conque_term/conque_sole.py	/^    window_bottom = None$/;"	v	class:ConqueSole
+window_height	autoload/conque_term/conque_sole_subprocess.py	/^    window_height = 40$/;"	v	class:ConqueSoleSubprocess
+window_resize	autoload/conque_term/conque_sole_wrapper.py	/^    def window_resize(self, lines, columns):$/;"	m	class:ConqueSoleWrapper
+window_resize	autoload/conque_term/conque_subprocess.py	/^    def window_resize(self, lines, columns):$/;"	m	class:ConqueSubprocess
+window_top	autoload/conque_term/conque_sole.py	/^    window_top = None$/;"	v	class:ConqueSole
+window_width	autoload/conque_term/conque_sole_subprocess.py	/^    window_width = 160$/;"	v	class:ConqueSoleSubprocess
+working_columns	autoload/conque_term/conque.py	/^    working_columns = 80 # can be changed by CSI ? 3 l\/h$/;"	v	class:Conque
+working_lines	autoload/conque_term/conque.py	/^    working_lines = 24 # can be changed by CSI r$/;"	v	class:Conque
+wrap	plugin/surround.vim	/^function! s:wrap(string,char,type,...)$/;"	f
+wrap_cursor	autoload/conque_term/conque.py	/^    wrap_cursor = False$/;"	v	class:Conque
+wrapreg	plugin/surround.vim	/^function! s:wrapreg(reg,char,...)$/;"	f
+write	autoload/conque_term/conque.py	/^    def write(self, input, set_cursor=True, read=True):$/;"	m	class:Conque
+write	autoload/conque_term/conque_sole_shared_memory.py	/^    def write(self, text, start=0):$/;"	m	class:ConqueSoleSharedMemory
+write	autoload/conque_term/conque_sole_subprocess.py	/^    def write(self):$/;"	m	class:ConqueSoleSubprocess
+write	autoload/conque_term/conque_sole_wrapper.py	/^    def write(self, text):$/;"	m	class:ConqueSoleWrapper
+write	autoload/conque_term/conque_subprocess.py	/^    def write(self, input):$/;"	m	class:ConqueSubprocess
+write_buffered_ord	autoload/conque_term/conque.py	/^    def write_buffered_ord(self, chr):$/;"	m	class:Conque
+write_expr	autoload/conque_term/conque.py	/^    def write_expr(self, expr, set_cursor=True, read=True):$/;"	m	class:Conque
+write_latin1	autoload/conque_term/conque.py	/^    def write_latin1(self, input, set_cursor=True, read=True):$/;"	m	class:Conque
+write_ord	autoload/conque_term/conque.py	/^    def write_ord(self, input, set_cursor=True, read=True):$/;"	m	class:Conque
+write_plain	autoload/conque_term/conque_sole_subprocess.py	/^    def write_plain(self, text):$/;"	m	class:ConqueSoleSubprocess
+write_vk	autoload/conque_term/conque_sole.py	/^    def write_vk(self, vk_code):$/;"	m	class:ConqueSole
+write_vk	autoload/conque_term/conque_sole_subprocess.py	/^    def write_vk(self, vk_code):$/;"	m	class:ConqueSoleSubprocess
+write_vk	autoload/conque_term/conque_sole_wrapper.py	/^    def write_vk(self, vk_code):$/;"	m	class:ConqueSoleWrapper
+xterm_to_rgb	autoload/conque_term/conque.py	/^    def xterm_to_rgb(self, color_code):$/;"	m	class:Conque
+yS	plugin/surround.vim	/^  nmap yS  <Plug>YSurround$/;"	m
+ySS	plugin/surround.vim	/^  nmap ySS <Plug>YSsurround$/;"	m
+ySs	plugin/surround.vim	/^  nmap ySs <Plug>YSsurround$/;"	m
+ys	plugin/surround.vim	/^  nmap ys  <Plug>Ysurround$/;"	m
+yss	plugin/surround.vim	/^  nmap yss <Plug>Yssurround$/;"	m

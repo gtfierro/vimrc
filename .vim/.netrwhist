@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/gabe/src/tinyrplstuff'
+let g:netrw_dirhist_2='/home/gabe/src/tinyrplstuff/firestorm_environment'
+let g:netrw_dirhist_3='/home/gabe/src/firestorm_environment/sdb_contrib/app'
+let g:netrw_dirhist_4='/home/gabe/buildd'
+let g:netrw_dirhist_5='/home/gabe/src/XBOS/scheduler'
+let g:netrw_dirhist_6='/home/gabe/Documents/x'
+let g:netrw_dirhist_7='/home/gabe/Downloads/hw1'
